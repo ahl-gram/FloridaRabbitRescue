@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: Contact
+description: Submit corrections, add a new organization, or get in touch with the Florida Rabbit Rescue Directory.
+---
+
+<section class="page-hero">
+  <h1>Contact &amp; Corrections</h1>
+  <p>Help us keep this directory accurate and up to date.</p>
+</section>
+
+<div class="prose">
+  <p>If you represent a rescue organization listed here and need to update your information, or if you believe an organization is missing, please use the form below. We also welcome general questions and feedback.</p>
+
+  <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="form-group" style="display:none">
+      <label>Don't fill this out: <input name="bot-field"></label>
+    </p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="organization">Organization name <span style="text-transform:none;font-weight:400">(if applicable)</span></label>
+      <input type="text" id="organization" name="organization">
+    </div>
+
+    <div class="form-group">
+      <label for="inquiry-type">Type of inquiry</label>
+      <select id="inquiry-type" name="inquiry-type" required>
+        <option value="" disabled selected>Select one...</option>
+        <option value="update">Update existing listing</option>
+        <option value="add">Add new organization</option>
+        <option value="question">General question</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message / Details</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+
+    <div class="form-submit">
+      <button type="submit" class="btn-primary">Submit →</button>
+    </div>
+  </form>
+
+  <p class="form-note">We aim to review all submissions within 2–4 weeks. Thank you for helping us keep this directory accurate.</p>
+</div>

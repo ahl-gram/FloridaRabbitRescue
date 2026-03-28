@@ -1,0 +1,101 @@
+---
+layout: base.njk
+title: Directory
+description: All verified Florida rabbit rescue organizations — mission statements, 501(c)(3) status, founding dates, and board transparency.
+---
+
+<section class="directory-hero">
+  <h1>Florida Rabbit Rescue Directory</h1>
+  <p>{{ directory.organizations | length }} verified nonprofit rabbit rescue organizations, sorted by years active.</p>
+</section>
+
+<div class="directory-intro">
+  <p>Every organization listed below is a confirmed 501(c)(3) nonprofit operating in the state of Florida. Listings include mission statements (verbatim where possible), founding dates, tax-exempt status, and board transparency details — all verified against publicly available records.</p>
+  <p>This directory was last verified in <strong>{{ directory.meta.last_verified }}</strong>. If you represent an organization listed here and need to update your information, please <a href="/contact/">contact us</a>.</p>
+</div>
+
+<div class="disclaimer">
+  <strong>Note:</strong> This directory does not rank or score rescue organizations. Information is presented as objective, publicly verifiable facts. Organizations are listed by years active (longest first) as a neutral ordering method.
+</div>
+
+<div class="directory-list">
+  {%- for org in directory.organizations | sortByYearsActive %}
+  <article class="directory-card" id="{{ org.id }}">
+    <div class="card-header">
+      <div class="card-header-info">
+        <div class="org-name">{{ org.name }}</div>
+        <div class="org-location">{{ org.location.city }}, {{ org.location.state }} · {{ org.location.region }}</div>
+        <div class="org-area">{{ org.service_area }}</div>
+      </div>
+      <div class="card-badge-col">
+        <span class="badge badge-green">✓ 501(c)(3)</span>
+        <span class="badge badge-earth">Est. {{ org.founded }}</span>
+      </div>
+    </div>
+
+    <div class="card-mission">
+      <div class="card-field-label">Mission statement</div>
+      <div class="card-mission-text">"{{ org.mission_statement }}"</div>
+    </div>
+
+    <div class="card-facts">
+      <div class="fact-cell">
+        <div class="card-field-label">501(c)(3) status</div>
+        <div class="fact-value">
+          {%- if org.nonprofit.status == "confirmed" or org.nonprofit.status == "confirmed_via_guidestar" %}Confirmed{% else %}{{ org.nonprofit.status_label }}{% endif -%}
+        </div>
+        <div class="fact-sub">
+          {%- if org.nonprofit.ein %}EIN: {{ org.nonprofit.ein }}{% endif -%}
+          {%- if org.nonprofit.guidestar_seal %} · {{ org.nonprofit.guidestar_seal }}{% endif -%}
+          {%- if org.nonprofit.guidestar_note and not org.nonprofit.guidestar_seal %} · {{ org.nonprofit.guidestar_note }}{% endif -%}
+        </div>
+      </div>
+      <div class="fact-cell">
+        <div class="card-field-label">In operation</div>
+        <div class="fact-value">Since {{ org.founded }}</div>
+        <div class="fact-sub">{{ org.years_active }} year{{ "s" if org.years_active != 1 }} active</div>
+      </div>
+      <div class="fact-cell">
+        <div class="card-field-label">Model</div>
+        <div class="fact-value">{{ org.model | modelLabel }}</div>
+        <div class="fact-sub">{{ org.species_focus | speciesLabel }}</div>
+      </div>
+    </div>
+
+    <div class="card-board">
+      <div class="card-field-label">Board of Directors</div>
+      <div class="board-status">
+        <span class="status-dot {{ org.board.status | boardDotClass }}"></span>
+        {{ org.board.status_label }}.
+        {%- if org.board.notes %} {{ org.board.notes }}{% endif %}
+      </div>
+    </div>
+
+    <div class="card-footer-row">
+      <span class="verified-tag">Last verified: {{ org.last_verified }}</span>
+      {%- if org.website %}
+      <a class="card-cta" href="{{ org.website }}" target="_blank" rel="noopener">↗ {{ org.website | replace("https://www.", "") | replace("https://", "") }}</a>
+      {%- elif org.linktree_url %}
+      <a class="card-cta" href="{{ org.linktree_url }}" target="_blank" rel="noopener">↗ Linktree</a>
+      {%- endif %}
+    </div>
+  </article>
+  {%- endfor %}
+</div>
+
+<div class="directory-notes">
+  <h2>Closed Organizations</h2>
+  <ul>
+    {%- for org in directory.closed_organizations %}
+    <li>
+      <strong>{{ org.name }}</strong> — {{ org.reason }}
+      {%- if org.url %} · <a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://", "") }}</a>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+
+  <div class="correction-cta">
+    <p>Is your organization missing or incorrect?</p>
+    <a class="btn-primary" href="/contact/">Submit a Correction →</a>
+  </div>
+</div>

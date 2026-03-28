@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — Florida Rabbit Rescue Directory</title>
+  <meta name="description" content="{{ description | default('A free, independently verified directory of Florida rabbit rescue organizations.') }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span>🐇</span> Florida Rabbit Rescue Directory</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); this.nextElementSibling.classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Home</a></li>
+      <li><a href="/directory/"{% if page.url == "/directory/" %} class="active"{% endif %}>Directory</a></li>
+      <li><a href="/values/"{% if page.url == "/values/" %} class="active"{% endif %}>Values</a></li>
+      <li><a href="/before-you-adopt/"{% if page.url == "/before-you-adopt/" %} class="active"{% endif %}>Before You Adopt</a></li>
+      <li><a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a></li>
+    </ul>
+  </div>
+</nav>
+
+{{ content | safe }}
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">🐇 Florida Rabbit Rescue Directory</div>
+        <p class="footer-desc">A free, independently maintained directory of verified rabbit rescue organizations in Florida. Not affiliated with any rescue, House Rabbit Society, or rabbit.org Foundation.</p>
+      </div>
+      <div>
+        <div class="footer-col-head">Directory</div>
+        <ul class="footer-links">
+          <li><a href="/directory/">Find a Rescue</a></li>
+          <li><a href="/before-you-adopt/">Before You Adopt</a></li>
+          <li><a href="/values/">Shared Values</a></li>
+          <li><a href="/about/">About This Directory</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Resources</div>
+        <ul class="footer-links">
+          <li><a href="/contact/">Submit a Correction</a></li>
+          <li><a href="https://houserabbit.org" target="_blank" rel="noopener">houserabbit.org</a></li>
+          <li><a href="https://rabbit.org" target="_blank" rel="noopener">rabbit.org</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">Last verified: March 2026 · Updated annually</div>
+      <div class="footer-orgs">
+        Values reference: <a href="https://houserabbit.org" target="_blank" rel="noopener">houserabbit.org</a> &amp; <a href="https://rabbit.org" target="_blank" rel="noopener">rabbit.org</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

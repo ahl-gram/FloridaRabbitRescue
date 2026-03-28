@@ -1,0 +1,1 @@
+I'm building a static website to be hosted on GitHub Pages and deployed via Netlify. I have a style mockup in HTML, a site structure document, and a JSON data file with all the directory content. Please read all three files before writing any code, then build the site starting with the home page and directory page.

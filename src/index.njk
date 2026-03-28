@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: Home
+description: A free, independently verified directory of Florida rabbit rescue organizations — and the values that guide responsible rabbit ownership.
+---
+
+<section class="hero">
+  <div class="hero-eyebrow">Florida · {{ directory.organizations | length }} verified rescues</div>
+  <h1>Find a rabbit rescue.<br><em>Do it right.</em></h1>
+  <p class="hero-sub">A free, independently verified directory of Florida rabbit rescue organizations — and the values that guide responsible rabbit ownership.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="/directory/">Find a Rescue →</a>
+    <a class="btn-outline" href="/before-you-adopt/">Before You Adopt</a>
+  </div>
+</section>
+
+<section class="section-inner">
+  <div class="section-label">What you'll find here</div>
+  <div class="intro-grid">
+    <a class="intro-card" href="/directory/">
+      <div class="intro-card-icon">🗺️</div>
+      <h3>Find a Rescue</h3>
+      <p>{{ directory.organizations | length }} verified nonprofit organizations across Florida — mission statements, founding dates, 501(c)(3) status, and board transparency, all in one place.</p>
+      <div class="intro-card-link">Browse the directory →</div>
+    </a>
+    <a class="intro-card" href="/before-you-adopt/">
+      <div class="intro-card-icon">📖</div>
+      <h3>Before You Adopt</h3>
+      <p>Rabbits are a 10-year commitment that require exotic veterinary care, indoor housing, and daily attention. Read this before you bring one home.</p>
+      <div class="intro-card-link">What to know first →</div>
+    </a>
+    <a class="intro-card" href="/values/">
+      <div class="intro-card-icon">🌿</div>
+      <h3>Shared Values</h3>
+      <p>The beliefs that unite House Rabbit Society and rabbit.org Foundation — drawn from their published philosophy pages and presented side by side.</p>
+      <div class="intro-card-link">Explore the values →</div>
+    </a>
+  </div>
+</section>
+
+<section class="about-block">
+  <div class="section-inner">
+    <div class="section-label">About this directory</div>
+    <p>This directory is independently maintained and not affiliated with any rescue organization, House Rabbit Society, or rabbit.org Foundation. Every listing is verified against publicly available records — including the IRS Business Master File, GuideStar, and the Florida Division of Corporations (Sunbiz).</p>
+    <p>Our goal is simple: help Florida residents find a reputable rabbit rescue, and give them the information they need to make a responsible decision. Last verified: <strong>March 2026</strong>.</p>
+  </div>
+</section>

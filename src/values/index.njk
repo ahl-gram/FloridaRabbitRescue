@@ -1,0 +1,63 @@
+---
+layout: base.njk
+title: Shared Values
+description: The beliefs that unite House Rabbit Society and rabbit.org Foundation — drawn from their published philosophy pages and presented side by side.
+---
+
+<section class="page-hero">
+  <h1>Shared Values</h1>
+  <p>The beliefs that unite House Rabbit Society and rabbit.org Foundation — drawn directly from their published philosophy pages.</p>
+</section>
+
+<div class="prose">
+  <p>{{ directory.shared_values.intro }}</p>
+
+  <div class="disclaimer">
+    <strong>Disclaimer:</strong> rabbit.org Foundation is an independent organization with no formal affiliation with House Rabbit Society. This page presents their published values side by side for educational purposes only.
+  </div>
+
+  <div class="values-grid">
+    {%- for value in directory.shared_values.values %}
+    <div class="value-card">
+      <div class="value-card-header">
+        <div class="value-statement">{{ value.statement }}</div>
+        {%- if value.source == "both" %}
+        <span class="value-source-tag tag-both">Both</span>
+        {%- elif value.source == "hrs" %}
+        <span class="value-source-tag tag-hrs">HRS</span>
+        {%- elif value.source == "rorg" %}
+        <span class="value-source-tag tag-rorg">rabbit.org</span>
+        {%- endif %}
+      </div>
+      <div class="value-quotes">
+        {%- if value.hrs_quote %}
+        <div class="value-quote">
+          <span class="value-quote-label">House Rabbit Society</span>
+          "{{ value.hrs_quote }}"
+        </div>
+        {%- endif %}
+        {%- if value.rorg_quote %}
+        <div class="value-quote">
+          <span class="value-quote-label">rabbit.org Foundation</span>
+          "{{ value.rorg_quote }}"
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <h2>Read More</h2>
+  <div class="resource-links">
+    <a class="resource-link" href="{{ directory.shared_values.sources.hrs.url }}" target="_blank" rel="noopener">
+      <strong>House Rabbit Society</strong>
+      <span>Mission and philosophy — houserabbit.org</span>
+    </a>
+    <a class="resource-link" href="{{ directory.shared_values.sources.rorg.url }}" target="_blank" rel="noopener">
+      <strong>rabbit.org Foundation</strong>
+      <span>Philosophy — rabbit.org</span>
+    </a>
+  </div>
+
+  <p>We encourage you to read both organizations' full philosophy statements before adopting. Understanding these values will help you provide the best possible home for a rabbit.</p>
+</div>

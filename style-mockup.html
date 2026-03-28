@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florida Rabbit Rescue Directory — Style Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ─────────────────────────────────────────
+   DESIGN TOKENS
+   ───────────────────────────────────────── */
+:root {
+  /* Greens */
+  --green-900: #1b2f22;
+  --green-800: #26422f;
+  --green-700: #2f5239;
+  --green-600: #3d6b4f;
+  --green-500: #548767;
+  --green-400: #7aab8a;
+  --green-300: #a8c9b4;
+  --green-200: #cfe0d6;
+  --green-100: #e8f0ea;
+  --green-50:  #f3f8f4;
+
+  /* Earth tones */
+  --earth-700: #6b4c2a;
+  --earth-600: #8b6b4a;
+  --earth-400: #b89070;
+  --earth-200: #dfc9b0;
+  --earth-100: #f0e6d8;
+  --earth-50:  #faf7f0;
+
+  /* Text */
+  --text-primary:   #1b2f22;
+  --text-secondary: #4a6352;
+  --text-muted:     #7a9485;
+  --text-on-dark:   #f3f8f4;
+
+  /* Surfaces */
+  --surface-page:   #faf7f0;
+  --surface-card:   #ffffff;
+  --surface-subtle: #f3f8f4;
+  --border:         #d8e5dc;
+  --border-strong:  #a8c9b4;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Jost', system-ui, sans-serif;
+
+  /* Spacing */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(27,47,34,0.08), 0 4px 16px rgba(27,47,34,0.06);
+  --shadow-hover: 0 4px 12px rgba(27,47,34,0.12), 0 12px 32px rgba(27,47,34,0.08);
+}
+
+/* ─────────────────────────────────────────
+   RESET & BASE
+   ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--surface-page);
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--green-600); text-decoration: none; }
+a:hover { color: var(--green-700); text-decoration: underline; }
+
+/* ─────────────────────────────────────────
+   NAVIGATION
+   ───────────────────────────────────────── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--green-800);
+  border-bottom: 1px solid var(--green-700);
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-logo span { font-size: 1.2rem; }
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--green-300);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+  text-decoration: none;
+}
+.nav-links a:hover { color: var(--text-on-dark); background: rgba(255,255,255,0.08); }
+.nav-links a.active { color: var(--text-on-dark); }
+
+/* ─────────────────────────────────────────
+   HERO
+   ───────────────────────────────────────── */
+.hero {
+  background: var(--green-800);
+  padding: 5rem 2rem 4.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 15% 110%, rgba(122,171,138,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 85% -10%, rgba(84,135,103,0.15) 0%, transparent 55%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-400);
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid rgba(122,171,138,0.3);
+  border-radius: 99px;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--text-on-dark);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 680px;
+  margin: 0 auto 1.25rem;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--green-300);
+}
+.hero-sub {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--green-300);
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--earth-400);
+  color: var(--green-900);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--earth-200); color: var(--green-900); transform: translateY(-1px); text-decoration: none; }
+.btn-outline {
+  background: transparent;
+  color: var(--green-200);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.75rem 1.75rem;
+  border: 1.5px solid rgba(168,201,180,0.4);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-outline:hover { border-color: var(--green-300); color: var(--text-on-dark); text-decoration: none; }
+
+/* ─────────────────────────────────────────
+   INTRO CARDS
+   ───────────────────────────────────────── */
+.intro-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.intro-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.intro-card:hover {
+  border-color: var(--green-400);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+.intro-card-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--green-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+.intro-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+.intro-card p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+}
+.intro-card-link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--green-600);
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+/* ─────────────────────────────────────────
+   DIRECTORY CARD SAMPLE
+   ───────────────────────────────────────── */
+.card-section {
+  background: var(--green-50);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 2rem;
+}
+.card-section-inner { max-width: 1100px; margin: 0 auto; }
+.directory-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  max-width: 720px;
+}
+.card-header {
+  padding: 1.5rem 1.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.card-badge-col { display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-end; }
+.org-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.2rem;
+}
+.org-location {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.org-area {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.2rem;
+}
+.org-area::before { content: '↔'; font-size: 0.7rem; color: var(--text-muted); }
+.badge {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 99px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+.badge-green { background: var(--green-100); color: var(--green-700); border-color: var(--green-300); }
+.badge-earth { background: var(--earth-100); color: var(--earth-700); border-color: var(--earth-200); }
+
+.card-mission {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-subtle);
+}
+.card-field-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.card-mission-text {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.65;
+  font-style: italic;
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.card-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.fact-cell {
+  padding: 1.1rem 1.5rem;
+  border-right: 1px solid var(--border);
+}
+.fact-cell:last-child { border-right: none; }
+.fact-value {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+.fact-sub { font-size: 0.75rem; color: var(--text-muted); }
+
+.card-board {
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.board-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot-green-s  { background: var(--green-500); }
+.dot-amber-s  { background: #c9a133; }
+.dot-red-s    { background: #b85c4a; }
+
+.card-footer-row {
+  padding: 1rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.verified-tag {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.card-cta {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--green-700);
+  border: 1.5px solid var(--green-400);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 1rem;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+.card-cta:hover { background: var(--green-600); color: white; border-color: var(--green-600); text-decoration: none; }
+
+/* ─────────────────────────────────────────
+   PALETTE & TYPOGRAPHY SWATCHES
+   ───────────────────────────────────────── */
+.palette-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.swatch-grid {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.swatch-block {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.swatch span {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.type-samples { display: flex; flex-direction: column; gap: 1.5rem; }
+.type-row { display: flex; align-items: baseline; gap: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.25rem; }
+.type-meta { width: 160px; flex-shrink: 0; }
+.type-meta strong { display: block; font-size: 0.72rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.2rem; }
+.type-meta span { font-size: 0.65rem; color: var(--text-muted); font-family: monospace; }
+.type-sample { flex: 1; }
+
+/* ─────────────────────────────────────────
+   FOOTER
+   ───────────────────────────────────────── */
+.site-footer {
+  background: var(--green-900);
+  color: var(--green-300);
+  padding: 3rem 2rem 2rem;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(168,201,180,0.15);
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  margin-bottom: 0.6rem;
+}
+.footer-desc {
+  font-size: 0.82rem;
+  color: var(--green-400);
+  line-height: 1.65;
+  max-width: 280px;
+}
+.footer-col-head {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-500);
+  margin-bottom: 0.9rem;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-links a {
+  font-size: 0.83rem;
+  color: var(--green-400);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--text-on-dark); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-legal { font-size: 0.75rem; color: var(--green-600); }
+.footer-orgs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.72rem;
+  color: var(--green-600);
+}
+.footer-orgs a { color: var(--green-500); text-decoration: none; }
+.footer-orgs a:hover { color: var(--green-300); }
+
+/* ─────────────────────────────────────────
+   LABEL STRIP
+   ───────────────────────────────────────── */
+.label-strip {
+  background: var(--earth-100);
+  border-top: 1px solid var(--earth-200);
+  padding: 0.6rem 2rem;
+  font-size: 0.72rem;
+  color: var(--earth-700);
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+</style>
+</head>
+<body>
+
+<!-- ── LABEL ── -->
+<div class="label-strip">Style Mockup — Florida Rabbit Rescue Directory · For review only · Not final content</div>
+
+<!-- ── NAVIGATION ── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><span>🐇</span> Florida Rabbit Rescue Directory</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Directory</a></li>
+      <li><a href="#">Values</a></li>
+      <li><a href="#">Before You Adopt</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-eyebrow">Florida · 9 verified rescues</div>
+  <h1>Find a rabbit rescue. <em>Do it right.</em></h1>
+  <p class="hero-sub">A free, independently verified directory of Florida rabbit rescue organizations — and the values that guide responsible rabbit ownership.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="#">Find a Rescue →</a>
+    <a class="btn-outline" href="#">Before You Adopt</a>
+  </div>
+</section>
+
+<!-- ── INTRO CARDS ── -->
+<section class="intro-section">
+  <div class="section-label">What you'll find here</div>
+  <div class="intro-grid">
+    <div class="intro-card">
+      <div class="intro-card-icon">🗺️</div>
+      <h3>Find a Rescue</h3>
+      <p>Nine verified nonprofit organizations across Florida — mission statements, founding dates, 501(c)(3) status, and board transparency, all in one place.</p>
+      <div class="intro-card-link">Browse the directory →</div>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-icon">📖</div>
+      <h3>Before You Adopt</h3>
+      <p>Rabbits are a 10-year commitment that require exotic veterinary care, indoor housing, and daily attention. Read this before you bring one home.</p>
+      <div class="intro-card-link">What to know first →</div>
+    </div>
+    <div class="intro-card">
+      <div class="intro-card-icon">🌿</div>
+      <h3>Shared Values</h3>
+      <p>The beliefs that unite House Rabbit Society and rabbit.org Foundation — drawn from their published philosophy pages and presented side by side.</p>
+      <div class="intro-card-link">Explore the values →</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DIRECTORY CARD SAMPLE ── -->
+<section class="card-section">
+  <div class="card-section-inner">
+    <div class="section-label">Sample directory card</div>
+    <div class="directory-card">
+      <div class="card-header">
+        <div style="flex:1">
+          <div class="org-name">Gainesville Rabbit Rescue</div>
+          <div class="org-location">Gainesville / Williston, FL &nbsp;·&nbsp; North Central Florida</div>
+          <div class="org-area">Statewide via foster network; primary location North Central FL</div>
+        </div>
+        <div class="card-badge-col">
+          <span class="badge badge-green">✓ 501(c)(3)</span>
+          <span class="badge badge-earth">Est. 1998</span>
+        </div>
+      </div>
+      <div class="card-mission">
+        <div class="card-field-label">Mission statement</div>
+        <div class="card-mission-text">"To rescue, rehabilitate, and adopt out rabbits to loving homes, as well as educate current and potential rabbit owners. GRR does not turn away any rabbit regardless of disability, illness, age, or temperament."</div>
+      </div>
+      <div class="card-facts">
+        <div class="fact-cell">
+          <div class="card-field-label">501(c)(3) status</div>
+          <div class="fact-value">Confirmed</div>
+          <div class="fact-sub">GuideStar verified · 990-N filer</div>
+        </div>
+        <div class="fact-cell">
+          <div class="card-field-label">In operation</div>
+          <div class="fact-value">Since 1998</div>
+          <div class="fact-sub">28 years active</div>
+        </div>
+        <div class="fact-cell">
+          <div class="card-field-label">Model</div>
+          <div class="fact-value">Foster + Facility</div>
+          <div class="fact-sub">Rabbits only</div>
+        </div>
+      </div>
+      <div class="card-board">
+        <div class="card-field-label">Board of Directors</div>
+        <div class="board-status">
+          <span class="status-dot dot-amber-s"></span>
+          Board confirmed — names not publicly listed. Long-established 501(c)(3); board required by FL law.
+        </div>
+      </div>
+      <div class="card-footer-row">
+        <span class="verified-tag">Last verified: March 2026</span>
+        <a class="card-cta" href="https://www.gainesvillerabbitrescue.org" target="_blank">↗ gainesvillerabbitrescue.org</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PALETTE & TYPE ── -->
+<section class="palette-section">
+  <div class="section-label">Color palette</div>
+  <div class="swatch-grid">
+    <div class="swatch"><div class="swatch-block" style="background:#1b2f22"></div><span>Green 900<br>#1b2f22</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#2f5239"></div><span>Green 700<br>#2f5239</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#3d6b4f"></div><span>Green 600<br>#3d6b4f</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#7aab8a"></div><span>Green 400<br>#7aab8a</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#a8c9b4"></div><span>Green 300<br>#a8c9b4</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#e8f0ea"></div><span>Green 100<br>#e8f0ea</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#faf7f0; border:1px solid #e0d8cc"></div><span>Cream<br>#faf7f0</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#8b6b4a"></div><span>Earth 600<br>#8b6b4a</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#b89070"></div><span>Earth 400<br>#b89070</span></div>
+    <div class="swatch"><div class="swatch-block" style="background:#f0e6d8; border:1px solid #e0d8cc"></div><span>Earth 50<br>#f0e6d8</span></div>
+  </div>
+
+  <div class="section-label">Typography</div>
+  <div class="type-samples">
+    <div class="type-row">
+      <div class="type-meta"><strong>Page heading</strong><span>Fraunces · 700 · 3.4rem</span></div>
+      <div class="type-sample" style="font-family:'Fraunces',serif;font-size:2rem;font-weight:700;color:#1b2f22;letter-spacing:-0.02em;line-height:1.15">Find a rabbit rescue. <em style="font-style:italic;font-weight:400;color:#3d6b4f">Do it right.</em></div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Section heading</strong><span>Fraunces · 600 · 1.3rem</span></div>
+      <div class="type-sample" style="font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:#1b2f22;letter-spacing:-0.01em">Gainesville Rabbit Rescue</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Mission / italic</strong><span>Fraunces · 400 italic · 0.9rem</span></div>
+      <div class="type-sample" style="font-family:'Fraunces',serif;font-size:0.9rem;font-weight:400;font-style:italic;color:#1b2f22;line-height:1.65">"To rescue, rehabilitate, and adopt out rabbits to loving homes, as well as educate current and potential rabbit owners."</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Body text</strong><span>Jost · 400 · 1rem</span></div>
+      <div class="type-sample" style="font-family:'Jost',sans-serif;font-size:0.95rem;font-weight:400;color:#4a6352;line-height:1.7">Rabbits are a 10-year commitment that require exotic veterinary care, indoor housing, and significant daily attention. This directory exists to help you find the right rescue — and to make sure you know what you're getting into before you bring a rabbit home.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Label / UI</strong><span>Jost · 500 · 0.7rem · uppercase</span></div>
+      <div class="type-sample" style="font-family:'Jost',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#7a9485">Mission Statement &nbsp;·&nbsp; Board of Directors &nbsp;·&nbsp; In Operation</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">🐇 Florida Rabbit Rescue Directory</div>
+        <p class="footer-desc">A free, independently maintained directory of verified rabbit rescue organizations in Florida. Not affiliated with any rescue, House Rabbit Society, or rabbit.org Foundation.</p>
+      </div>
+      <div>
+        <div class="footer-col-head">Directory</div>
+        <ul class="footer-links">
+          <li><a href="#">Find a Rescue</a></li>
+          <li><a href="#">Before You Adopt</a></li>
+          <li><a href="#">Shared Values</a></li>
+          <li><a href="#">About This Directory</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Resources</div>
+        <ul class="footer-links">
+          <li><a href="#">Submit a Correction</a></li>
+          <li><a href="#">houserabbit.org</a></li>
+          <li><a href="#">rabbit.org</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">Last verified: March 2026 &nbsp;·&nbsp; Updated annually</div>
+      <div class="footer-orgs">
+        Values reference: <a href="#">houserabbit.org</a> &amp; <a href="#">rabbit.org</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
