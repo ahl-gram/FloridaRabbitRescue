@@ -49,6 +49,9 @@ description: All verified Florida rabbit rescue organizations — mission statem
           {%- if org.nonprofit.guidestar_seal %} · {{ org.nonprofit.guidestar_seal }}{% endif -%}
           {%- if org.nonprofit.guidestar_note and not org.nonprofit.guidestar_seal %} · {{ org.nonprofit.guidestar_note }}{% endif -%}
         </div>
+        {%- if org.nonprofit.sunbiz_document_number %}
+        <div class="fact-sub">Sunbiz: {% if org.nonprofit.sunbiz_url %}<a href="{{ org.nonprofit.sunbiz_url }}" target="_blank" rel="noopener">{{ org.nonprofit.sunbiz_document_number }}</a>{% else %}{{ org.nonprofit.sunbiz_document_number }}{% endif %}</div>
+        {%- endif %}
       </div>
       <div class="fact-cell">
         <div class="card-field-label">In operation</div>
