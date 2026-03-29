@@ -106,14 +106,34 @@
   ],
   "excluded_organizations": [
     {
-      "name": "Floppy Ear Rescue & Sanctuary",
-      "reason": "Multi-species rescue (birds, reptiles, small animals)",
-      "url": "https://www.floppyearrescue.org"
-    },
-    {
       "name": "Bunnychick Haven of Navarre",
       "reason": "Multi-species petting zoo and wellness retreat (rabbits, chickens, goats)",
       "url": "https://bunnychickhavenofnavarre.com"
+    },
+    {
+      "name": "Pawphanage for Wayward Pets",
+      "reason": "Multi-animal rescue (cats, dogs, hamsters, guinea pigs, rabbits) — not rabbit-focused; very small scale with minimal rabbit inventory",
+      "url": "https://www.pawphanage.org"
+    },
+    {
+      "name": "Live Freely Sanctuary",
+      "reason": "Multi-animal sanctuary focused on animals with disabilities — not rabbit-specific; questionable activity level (Sunbiz lapsed and reinstated, $0 reported assets/income, no website)",
+      "url": "https://www.facebook.com/LiveFreelySanctuary"
+    },
+    {
+      "name": "Palm Beach Rabbit, Guinea Pig, etc. Rescue",
+      "reason": "Not a standalone organization — operates as a program of Palm Beach Parrot & Bird Rescue Inc.; multi-animal (rabbits, guinea pigs, small animals alongside birds); no dedicated website",
+      "url": "https://www.facebook.com/p/Palm-Beach-Rabbit-Guinea-Pig-etc-Rescue-100087635917494/"
+    },
+    {
+      "name": "Floppy Ear Rescue & Sanctuary",
+      "reason": "Multi-animal rescue (rabbits, chinchillas, guinea pigs, reptiles); currently not accepting new surrenders due to limited space and resources",
+      "url": "https://www.floppyearrescue.org"
+    },
+    {
+      "name": "CudaBear's Lair Animal Sanctuary",
+      "reason": "Farm and animal sanctuary — primarily pigs, goats, horses, emus, reptiles, and cats; not rabbit-focused",
+      "url": "https://www.cudabearslairanimalsanctuary.org"
     }
   ],
   "organizations": [
@@ -493,6 +513,51 @@
       "species_focus": "rabbits_and_guinea_pigs",
       "model": "foster_only",
       "directory_note": "Newest organization in the directory. 501(c)(3) confirmed via IRS determination letter (11/19/2024). Listed as of March 2026 with the caveat that this org has under one year of operation \u2014 outreach and annual re-verification recommended.",
+      "last_verified": "2026-03"
+    }
+    ,
+    {
+      "id": "fwrr",
+      "name": "Fort Wilbur Rabbit Resources",
+      "short_name": "Fort Wilbur",
+      "location": {
+        "city": "Ormond Beach",
+        "state": "FL",
+        "region": "Northeast Florida / Volusia County"
+      },
+      "service_area": "Statewide via foster network; free grooming in Volusia, Flagler, and Lake Counties; also assists shelters in Georgia and the Carolinas",
+      "website": "https://avwahc.wixsite.com/fwrr",
+      "website_note": "Primary Wix site; fortwilbur.org may have intermittent issues",
+      "social": {
+        "facebook": "https://www.facebook.com/fortwilburbuns/",
+        "instagram": "https://www.instagram.com/fortwilburbunnies/"
+      },
+      "mission_statement": "A 501(c)(3) nonprofit dedicated to rehabilitating and rehoming critically neglected and abused rabbits, with a broader mission of rabbit rehabilitation, therapy, and education. The only rabbit rescue in the United States that offers all of its programs free of charge, including grooming, health evaluations, workshops, one-on-one training, a 24-hour phone line, and disaster relief.",
+      "mission_source": "avwahc.wixsite.com/fwrr",
+      "nonprofit": {
+        "status": "confirmed",
+        "status_label": "Confirmed 501(c)(3)",
+        "ein": "84-2423216",
+        "ein_note": null,
+        "guidestar_note": "990-N filer (under $50k revenue)",
+        "sunbiz_document_number": "N19000007249",
+        "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=FORTWILBURRABBITRESOURCES%20N190000072491&aggregateId=domnp-n19000007249-5f297fa2-1385-4d6a-9efb-a4417a73c9be&searchTerm=fort%20wilbur&listNameOrder=FORTWILBURRABBITRESCUE%20N190000072490",
+        "sunbiz_note": "Name changed from 'Fort Wilbur Rabbit Rescue' to 'Fort Wilbur Rabbit Resources, Inc.' on 01/16/2024"
+      },
+      "founded": 2011,
+      "founded_formal": 2019,
+      "years_active": 15,
+      "founded_source": "Started informally in 2011; incorporated as FL nonprofit July 2019; IRS 501(c)(3) effective September 2022",
+      "board": {
+        "status": "sunbiz_principals",
+        "status_label": "3 principals on FL Sunbiz records",
+        "notes": "CEO: Vanessa A. Chaves (founder), COO: Desiree Razon, CFO/Secretary: Adam W. Hill. ~12 consistent volunteers. Annual report filed April 2025."
+      },
+      "species_focus": "rabbits_only",
+      "model": "foster_and_rehabilitation",
+      "caveats": [
+        "Only accepts rabbits from other 501(c)(3) rescues and state shelters — does not take surrenders from the general public"
+      ],
       "last_verified": "2026-03"
     }
   ],

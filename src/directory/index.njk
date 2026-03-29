@@ -23,7 +23,7 @@ description: All verified Florida rabbit rescue organizations — mission statem
   <article class="directory-card" id="{{ org.id }}">
     <div class="card-header">
       <div class="card-header-info">
-        <div class="org-name">{{ org.name }}</div>
+        <div class="org-name"><a href="#{{ org.id }}" class="org-name-link">{{ org.name }}</a></div>
         <div class="org-location">{{ org.location.city }}, {{ org.location.state }} · {{ org.location.region }}</div>
         <div class="org-area">{{ org.service_area }}</div>
       </div>
@@ -74,12 +74,25 @@ description: All verified Florida rabbit rescue organizations — mission statem
       </div>
     </div>
 
+    {%- if org.caveats %}
+    <div class="card-caveats">
+      <div class="card-field-label">Important notes</div>
+      <ul class="caveats-list">
+        {%- for caveat in org.caveats %}
+        <li>{{ caveat }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+
     <div class="card-footer-row">
       <span class="verified-tag">Last verified: {{ org.last_verified }}</span>
       {%- if org.website %}
       <a class="card-cta" href="{{ org.website }}" target="_blank" rel="noopener">↗ {{ org.website | replace("https://www.", "") | replace("https://", "") }}</a>
       {%- elif org.linktree_url %}
       <a class="card-cta" href="{{ org.linktree_url }}" target="_blank" rel="noopener">↗ Linktree</a>
+      {%- elif org.social and org.social.facebook %}
+      <a class="card-cta" href="{{ org.social.facebook }}" target="_blank" rel="noopener">↗ Facebook</a>
       {%- endif %}
     </div>
   </article>
@@ -92,6 +105,17 @@ description: All verified Florida rabbit rescue organizations — mission statem
     {%- for org in directory.closed_organizations %}
     <li>
       <strong>{{ org.name }}</strong> — {{ org.reason }}
+      {%- if org.url %} · <a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://", "") }}</a>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+
+  <h2>Other Rabbit-Friendly Organizations</h2>
+  <p class="excluded-intro">The following organizations were reviewed but not included in the main directory, typically because their primary focus extends beyond rabbits. They may still have rabbits available for adoption — we encourage you to reach out to them directly.</p>
+  <ul>
+    {%- for org in directory.excluded_organizations | sortByName %}
+    <li>
+      <strong>{{ org.name }}</strong>
       {%- if org.url %} · <a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://", "") }}</a>{% endif %}
     </li>
     {%- endfor %}

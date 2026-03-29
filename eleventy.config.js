@@ -16,7 +16,9 @@ export default function(eleventyConfig) {
   eleventyConfig.addFilter("modelLabel", function(model) {
     const map = {
       "foster_only": "Foster-Based",
-      "foster_and_facility": "Foster + Facility"
+      "foster_and_facility": "Foster + Facility",
+      "home_sanctuary": "Home-Based Sanctuary",
+      "foster_and_rehabilitation": "Foster + Rehabilitation"
     };
     return map[model] || model;
   });
@@ -25,9 +27,15 @@ export default function(eleventyConfig) {
     const map = {
       "rabbits_only": "Rabbits only",
       "rabbits_primary": "Rabbits (primary)",
-      "rabbits_and_guinea_pigs": "Rabbits & guinea pigs"
+      "rabbits_and_guinea_pigs": "Rabbits & guinea pigs",
+      "multi_animal": "Multi-animal rescue",
+      "farm_sanctuary": "Farm & animal sanctuary"
     };
     return map[focus] || focus;
+  });
+
+  eleventyConfig.addFilter("sortByName", function(orgs) {
+    return [...orgs].sort((a, b) => a.name.localeCompare(b.name));
   });
 
   eleventyConfig.addFilter("sortByYearsActive", function(orgs) {
