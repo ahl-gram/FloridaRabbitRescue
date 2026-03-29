@@ -1,4 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="6" fill="#26422f"/>
-  <text x="16" y="24" font-size="22" text-anchor="middle">🐇</text>
+  <!-- Rabbit silhouette -->
+  <g fill="#a8c9b4">
+    <!-- Left ear -->
+    <ellipse cx="12.5" cy="8" rx="2" ry="5" transform="rotate(-10 12.5 8)"/>
+    <!-- Right ear -->
+    <ellipse cx="19.5" cy="8" rx="2" ry="5" transform="rotate(10 19.5 8)"/>
+    <!-- Head -->
+    <circle cx="16" cy="15" r="5"/>
+    <!-- Body -->
+    <ellipse cx="16" cy="22.5" rx="5.5" ry="4.5"/>
+    <!-- Tail -->
+    <circle cx="21" cy="24" r="1.5"/>
+  </g>
+  <!-- Inner ears -->
+  <g fill="#cfe0d6">
+    <ellipse cx="12.5" cy="7.5" rx="1" ry="3" transform="rotate(-10 12.5 7.5)"/>
+    <ellipse cx="19.5" cy="7.5" rx="1" ry="3" transform="rotate(10 19.5 7.5)"/>
+  </g>
+  <!-- Eyes -->
+  <circle cx="14" cy="14" r="0.9" fill="#26422f"/>
+  <circle cx="18" cy="14" r="0.9" fill="#26422f"/>
+  <!-- Nose -->
+  <ellipse cx="16" cy="16.2" rx="0.6" ry="0.4" fill="#26422f"/>
 </svg>
