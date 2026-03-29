@@ -1,19 +1,19 @@
 ---
 layout: base.njk
 title: Shared Values
-description: The beliefs that unite House Rabbit Society and rabbit.org Foundation — drawn from their published philosophy pages and presented side by side.
+description: The beliefs that unite House Rabbit Society and Rabbit.org Foundation — drawn from their published philosophy pages and presented side by side.
 ---
 
 <section class="page-hero">
   <h1>Shared Values</h1>
-  <p>The beliefs that unite House Rabbit Society and rabbit.org Foundation — drawn directly from their published philosophy pages.</p>
+  <p>The beliefs that unite House Rabbit Society and Rabbit.org Foundation — drawn directly from their published philosophy pages.</p>
 </section>
 
 <div class="prose">
   <p>{{ directory.shared_values.intro }}</p>
 
   <div class="disclaimer">
-    <strong>Disclaimer:</strong> rabbit.org Foundation is an independent organization with no formal affiliation with House Rabbit Society. This page presents their published values side by side for educational purposes only.
+    <strong>Disclaimer:</strong> Rabbit.org Foundation is an independent organization with no formal affiliation with House Rabbit Society. This page presents their published values side by side for educational purposes only.
   </div>
 
   <div class="values-grid">
@@ -26,7 +26,7 @@ description: The beliefs that unite House Rabbit Society and rabbit.org Foundati
         {%- elif value.source == "hrs" %}
         <span class="value-source-tag tag-hrs">HRS</span>
         {%- elif value.source == "rorg" %}
-        <span class="value-source-tag tag-rorg">rabbit.org</span>
+        <span class="value-source-tag tag-rorg">Rabbit.org</span>
         {%- endif %}
       </div>
       <div class="value-quotes">
@@ -38,7 +38,7 @@ description: The beliefs that unite House Rabbit Society and rabbit.org Foundati
         {%- endif %}
         {%- if value.rorg_quote %}
         <div class="value-quote">
-          <span class="value-quote-label">rabbit.org Foundation</span>
+          <span class="value-quote-label">Rabbit.org Foundation</span>
           "{{ value.rorg_quote }}"
         </div>
         {%- endif %}
@@ -54,7 +54,7 @@ description: The beliefs that unite House Rabbit Society and rabbit.org Foundati
       <span>Mission and philosophy — houserabbit.org</span>
     </a>
     <a class="resource-link" href="{{ directory.shared_values.sources.rorg.url }}" target="_blank" rel="noopener">
-      <strong>rabbit.org Foundation</strong>
+      <strong>Rabbit.org Foundation</strong>
       <span>Philosophy — rabbit.org</span>
     </a>
   </div>

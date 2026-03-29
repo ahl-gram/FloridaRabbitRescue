@@ -5,7 +5,7 @@
     "verifier_notes": "All data sourced from publicly available websites, GuideStar, Charity Navigator, Florida Division of Corporations (Sunbiz), and IRS Business Master File. Mission statements are verbatim or as close to verbatim as publicly available. Founding years sourced from FL corporate records, organization websites, or IRS ruling year where available."
   },
   "shared_values": {
-    "intro": "The following values are drawn directly from the published philosophy pages of House Rabbit Society (houserabbit.org, founded 1988) and rabbit.org Foundation. Marinell Harriman \u2014 author of The House Rabbit Handbook and a founding figure of House Rabbit Society \u2014 currently serves on the board of rabbit.org Foundation, which explains the substantial overlap in their core beliefs. rabbit.org Foundation is an independent organization with no formal affiliation with House Rabbit Society.",
+    "intro": "The following values are drawn directly from the published philosophy pages of House Rabbit Society (houserabbit.org, founded 1988) and Rabbit.org Foundation. Marinell Harriman \u2014 author of The House Rabbit Handbook and a founding figure of House Rabbit Society \u2014 currently serves on the board of Rabbit.org Foundation, which explains the substantial overlap in their core beliefs. Rabbit.org Foundation is an independent organization with no formal affiliation with House Rabbit Society.",
     "sources": {
       "hrs": {
         "name": "House Rabbit Society",
@@ -14,7 +14,7 @@
         "founded": 1988
       },
       "rorg": {
-        "name": "rabbit.org Foundation",
+        "name": "Rabbit.org Foundation",
         "url": "https://rabbit.org/about/philosophy/",
         "ein": "93-3226940",
         "note": "Independent organization. No affiliation with House Rabbit Society."
