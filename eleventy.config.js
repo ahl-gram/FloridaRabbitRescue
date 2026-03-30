@@ -3,16 +3,6 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
 
-  eleventyConfig.addFilter("boardDotClass", function(status) {
-    const map = {
-      "publicly_listed": "dot-green-s",
-      "confirmed_not_listed": "dot-amber-s",
-      "sunbiz_principals": "dot-amber-s",
-      "not_found": "dot-red-s"
-    };
-    return map[status] || "dot-amber-s";
-  });
-
   eleventyConfig.addFilter("modelLabel", function(model) {
     const map = {
       "foster_only": "Foster-Based",

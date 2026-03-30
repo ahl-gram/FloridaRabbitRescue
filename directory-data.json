@@ -167,6 +167,7 @@
       "board": {
         "status": "confirmed_not_listed",
         "status_label": "Board confirmed \u2014 names not publicly listed",
+        "sunbiz_principals_count": 6,
         "notes": "Long-established 501(c)(3); board existence required by FL law. Individual names not published on website or GuideStar."
       },
       "species_focus": "rabbits_only",
@@ -320,6 +321,7 @@
       "board": {
         "status": "not_found",
         "status_label": "Not found in public records",
+        "sunbiz_principals_count": 3,
         "notes": "GuideStar explicitly notes 'no recorded board members.' Website does not list board. FL corporate records show 3 active principals as required by law."
       },
       "species_focus": "rabbits_only",
@@ -356,6 +358,7 @@
       "board": {
         "status": "not_found",
         "status_label": "Not found in public records",
+        "sunbiz_principals_count": 3,
         "notes": "No board listing found on website or in public filings."
       },
       "species_note": "Also rescues guinea pigs in addition to rabbits",
@@ -395,6 +398,7 @@
       "board": {
         "status": "not_found",
         "status_label": "Not found in public records",
+        "sunbiz_principals_count": 3,
         "notes": "No dedicated website; no board information available publicly. No listing on GuideStar governance section."
       },
       "species_focus": "rabbits_only",
@@ -433,6 +437,7 @@
       "board": {
         "status": "sunbiz_principals",
         "status_label": "3 principals on FL Sunbiz records",
+        "sunbiz_principals_count": 3,
         "notes": "Florida Division of Corporations records (search.sunbiz.org) show 3 active principals \u2014 the legal minimum. Names verifiable via public record. Not listed on their website."
       },
       "species_focus": "rabbits_only",
@@ -469,6 +474,7 @@
       "board": {
         "status": "not_found",
         "status_label": "Not found in public records",
+        "sunbiz_principals_count": 1,
         "notes": "No board information on website or public filings. Note: organization also advocates for guinea pig education; rescue operations appear to be rabbit-focused."
       },
       "species_note": "Rescue is rabbit-focused; website includes guinea pig education as a secondary interest",
@@ -517,6 +523,7 @@
       "board": {
         "status": "not_found",
         "status_label": "Not found in public records",
+        "sunbiz_principals_count": 3,
         "notes": "No board information on website or in any public filing. Organization is less than one year old."
       },
       "species_note": "Rescues both rabbits and guinea pigs",
@@ -562,6 +569,7 @@
       "board": {
         "status": "sunbiz_principals",
         "status_label": "3 principals on FL Sunbiz records",
+        "sunbiz_principals_count": 3,
         "notes": "CEO: Vanessa A. Chaves (founder), COO: Desiree Razon, CFO/Secretary: Adam W. Hill. ~12 consistent volunteers. Annual report filed April 2025."
       },
       "species_focus": "rabbits_only",

@@ -588,9 +588,7 @@ a:hover { color: var(--green-700); text-decoration: underline; }
   border-radius: 50%;
   flex-shrink: 0;
 }
-.dot-green-s  { background: var(--text-muted); }
-.dot-amber-s  { background: var(--text-muted); }
-.dot-red-s    { background: var(--text-muted); }
+.dot-muted    { background: var(--text-muted); }
 
 .card-footer-row {
   padding: 1rem 1.75rem;

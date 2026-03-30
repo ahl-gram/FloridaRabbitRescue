@@ -66,9 +66,11 @@ description: All verified Florida rabbit rescue organizations — mission statem
     <div class="card-board">
       <div class="card-field-label">Board of Directors</div>
       <div class="board-status">
-        <span class="status-dot {{ org.board.status | boardDotClass }}"></span>
-        {{ org.board.status_label }}.
-        {%- if org.board.notes %} {{ org.board.notes }}{% endif %}
+        <span class="status-dot dot-muted"></span>
+        {%- if org.board.status == "publicly_listed" %} Listed on website
+        {%- elif org.board.sunbiz_principals_count %} {{ org.board.sunbiz_principals_count }} principal{{ "s" if org.board.sunbiz_principals_count != 1 }} on Sunbiz
+        {%- else %} {{ org.board.status_label }}
+        {%- endif %}
       </div>
     </div>
 
