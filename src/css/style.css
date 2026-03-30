@@ -572,9 +572,17 @@ a:hover { color: var(--green-700); text-decoration: underline; }
 }
 .fact-sub { font-size: 0.75rem; color: var(--text-muted); }
 
-.card-board {
-  padding: 1rem 1.75rem;
-  border-bottom: 1px solid var(--border);
+.social-icons {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+}
+.social-icon {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.social-icon:hover {
+  color: var(--text-primary);
 }
 .board-status {
   display: flex;

@@ -149,6 +149,10 @@
       "service_area": "Statewide via foster network; primary location North Central FL",
       "website": "https://www.gainesvillerabbitrescue.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/williston/gainesville-rabbit-rescue-fl110/",
+      "social": {
+        "facebook": "https://www.facebook.com/gvillerabbitrescue",
+        "instagram": "https://www.instagram.com/gainesvillerabbitrescue/"
+      },
       "mission_statement": "To rescue, rehabilitate, and adopt out rabbits to loving homes, as well as educate current and potential rabbit owners. GRR does not turn away any rabbit regardless of disability, illness, age, or temperament.",
       "mission_source": "gainesvillerabbitrescue.org/about-us/",
       "nonprofit": {
@@ -186,6 +190,10 @@
       "service_area": "Central Florida; 100% foster-based",
       "website": "https://orlandorabbit.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/longwood/orlando-rabbit-care-adoptions-orca-fl140/",
+      "social": {
+        "facebook": "https://www.facebook.com/orlandorabbitcareandadoptions",
+        "instagram": "https://www.instagram.com/orlandorabbitcareandadoptions/"
+      },
       "mission_statement": "An organization dedicated to the health, care and enjoyment of house rabbits as family members.",
       "mission_source": "orlandorabbit.org/about-us",
       "nonprofit": {
@@ -225,6 +233,10 @@
       "service_area": "All of Florida; primarily West Coast; 100% foster-based",
       "website": "https://tbhrr.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/brandon/tampa-bay-house-rabbit-rescue-fl1313/",
+      "social": {
+        "facebook": "https://www.facebook.com/TBHouseRabbitRescue",
+        "instagram": "https://www.instagram.com/tampabayhouserabbitrescue/"
+      },
       "mission_statement": "To promote knowledgeable and correct care of domestic house rabbits, including helping the public gain this knowledge; rescuing and rehabilitating domestic rabbits; aiding other rescues and shelters with rabbit overpopulation; assisting other rabbit welfare organizations; and promoting fostering and adoption of domestic house rabbits, especially in the State of Florida.",
       "mission_source": "tbhrr.org/about-us/",
       "nonprofit": {
@@ -263,6 +275,10 @@
       "service_area": "SW Florida (Lee and Collier counties primarily); foster-based network",
       "website": "https://www.respectforrabbits.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/naples/southwest-florida-house-rabbit-rescue-fl1441/",
+      "social": {
+        "facebook": "https://www.facebook.com/respectforrabbits",
+        "instagram": "https://www.instagram.com/respectforrabbits/"
+      },
       "mission_statement": "To save the lives of domestic rabbits through outstanding education, advocacy work on their behalf, and providing excellent adoptions. We strive to elevate the respect of rabbits in our society to that of other companion animals.",
       "mission_source": "guidestar.org profile and respectforrabbits.org/about",
       "nonprofit": {
@@ -300,6 +316,10 @@
       "service_area": "Palm Beach, Broward, and Miami-Dade Counties",
       "website": "https://eastcoastrabbitrescue.org",
       "petfinder_url": "https://www.adoptapet.com/shelter/95759-east-coast-rabbit-rescue-west-palm-beach-florida",
+      "social": {
+        "facebook": "https://www.facebook.com/eastrabbitrescue",
+        "instagram": "https://www.instagram.com/eastcoast.rabbitrescue/"
+      },
       "mission_statement": "To rescue rabbits from abandoned situations, euthanasia list, private surrendering and hoarding cases. We will ensure the best care, shelter and love for each animal. We will provide necessary veterinary care including spay/neuter surgery, microchip, RHDV2 vaccine and eventually find the perfect forever homes.",
       "mission_source": "eastcoastrabbitrescue.org",
       "nonprofit": {
@@ -340,6 +360,10 @@
       "service_area": "Miami-Dade, Broward, and Palm Beach Counties; 100% foster-based",
       "website": "https://pennyandwild.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/miami/penny-and-wild-smalls-of-south-florida-fl1733/",
+      "social": {
+        "facebook": "https://www.facebook.com/PennyandWildSOSFL",
+        "instagram": "https://www.instagram.com/pennyandwildrescue/"
+      },
       "mission_statement": "To rescue rabbits and guinea pigs who have been abandoned outdoors, are running out of time in shelters, or need complex medical care. We also provide free education to the community on proper small animal care and accept owner surrenders on a case by case basis. Not all rabbits and guinea pigs that we encounter are adoptable, due to age or medical conditions, and for those who are not we provide lifelong sanctuary to ensure they live out their lives in comfort and safety.",
       "mission_source": "pennyandwild.org",
       "nonprofit": {
@@ -380,6 +404,11 @@
       "website_note": "No dedicated website. Primary online presence via Linktree, Facebook, Instagram, and Petfinder.",
       "linktree_url": "https://linktr.ee/spacecoastbunnies",
       "petfinder_url": "https://www.petfinder.com/search/pets-for-adoption/?shelter_id%5B0%5D=FL1599",
+      "social": {
+        "facebook": "https://www.facebook.com/spacecoastbunnies",
+        "instagram": "https://www.instagram.com/spacecoastbunnies/",
+        "tiktok": "https://www.tiktok.com/@spacecoastbunniesrescue"
+      },
       "mission_statement": "A 501(c)(3) helping buns in need find safe, loving, indoor homes. Rabbit rescue, advocacy and education organization in Brevard County, Florida.",
       "mission_source": "linktr.ee/spacecoastbunnies and Chewy charity profile",
       "nonprofit": {
@@ -417,6 +446,10 @@
       "service_area": "NE Florida and Jacksonville metro region as well as the Tallahassee area",
       "website": "https://www.bebettesbunnyrescue.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/hilliard/bebettes-bunny-rescue-inc-fl1788/",
+      "social": {
+        "facebook": "https://www.facebook.com/BebettesBunnyRescue",
+        "instagram": "https://www.instagram.com/bebettesbunnyrescue/"
+      },
       "mission_statement": "To save rabbit lives through collective efforts. By promoting adoption, spreading awareness, educating the public, and providing support to shelters and rescues, we aim to ensure a brighter and safer future for these furry companions.",
       "mission_source": "bebettesbunnyrescue.org",
       "nonprofit": {
@@ -456,6 +489,9 @@
       "service_area": "Central Florida; 100% foster-based",
       "website": "https://www.hollyhops.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/deltona/holly-hops-rabbit-rescue-and-rehabilitation-inc-fl1900/",
+      "social": {
+        "facebook": "https://www.facebook.com/RabbitandGuineapigEducation"
+      },
       "mission_statement": "To rescue, rehabilitate, and rehome domestic rabbits that have been left to fend for themselves in dangerous situations or surrendered by people who can no longer care for them. We also educate the public on indoor domestic rabbit care that benefits the rabbit and provides a safe living environment.",
       "mission_source": "hollyhops.org",
       "nonprofit": {

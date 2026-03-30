@@ -63,13 +63,38 @@ description: All verified Florida rabbit rescue organizations — mission statem
       </div>
     </div>
 
-    <div class="card-board">
-      <div class="card-field-label">Board of Directors</div>
-      <div class="board-status">
-        <span class="status-dot dot-muted"></span>
-        {%- if org.board.status == "publicly_listed" %} Listed on website
-        {%- elif org.board.sunbiz_principals_count %} {{ org.board.sunbiz_principals_count }} principal{{ "s" if org.board.sunbiz_principals_count != 1 }} on Sunbiz
-        {%- else %} {{ org.board.status_label }}
+    <div class="card-facts">
+      <div class="fact-cell">
+        <div class="card-field-label">Board of Directors</div>
+        <div class="board-status">
+          <span class="status-dot dot-muted"></span>
+          {%- if org.board.status == "publicly_listed" %} Listed on website
+          {%- elif org.board.sunbiz_principals_count %} {{ org.board.sunbiz_principals_count }} principal{{ "s" if org.board.sunbiz_principals_count != 1 }} on Sunbiz
+          {%- else %} {{ org.board.status_label }}
+          {%- endif %}
+        </div>
+      </div>
+      <div class="fact-cell"></div>
+      <div class="fact-cell">
+        {%- if org.social %}
+        <div class="card-field-label">Social</div>
+        <div class="social-icons">
+          {%- if org.social.facebook %}
+          <a href="{{ org.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          {%- endif %}
+          {%- if org.social.instagram %}
+          <a href="{{ org.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 011.523.99 4.088 4.088 0 01.99 1.524c.163.46.349 1.26.403 2.43.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.088 4.088 0 01-.99 1.523 4.088 4.088 0 01-1.524.99c-.46.163-1.26.349-2.43.403-1.265.058-1.645.07-4.849.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.088 4.088 0 01-1.523-.99 4.088 4.088 0 01-.99-1.524c-.163-.46-.349-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43a4.088 4.088 0 01.99-1.523A4.088 4.088 0 015.15 2.636c.46-.163 1.26-.349 2.43-.403C8.845 2.175 9.225 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.13 4.902.333 4.14.63a6.21 6.21 0 00-2.245 1.462A6.21 6.21 0 00.433 4.337C.136 5.1-.067 5.973-.009 7.25.005 8.53 0 8.939 0 12.198c0 3.259.014 3.668.072 4.948.058 1.277.261 2.15.558 2.913a6.21 6.21 0 001.462 2.245 6.21 6.21 0 002.245 1.462c.763.297 1.636.5 2.913.558C8.53 24.382 8.939 24.396 12 24.396s3.47-.014 4.75-.072c1.277-.058 2.15-.261 2.913-.558a6.21 6.21 0 002.245-1.462 6.21 6.21 0 001.462-2.245c.297-.763.5-1.636.558-2.913.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.058-1.277-.261-2.15-.558-2.913a6.21 6.21 0 00-1.462-2.245A6.21 6.21 0 0019.663.63C18.9.333 18.027.13 16.75.072 15.47.014 15.061 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-10.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+          </a>
+          {%- endif %}
+          {%- if org.social.tiktok %}
+          <a href="{{ org.social.tiktok }}" target="_blank" rel="noopener" aria-label="TikTok" class="social-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.75a8.18 8.18 0 004.76 1.52V6.84a4.84 4.84 0 01-1-.15z"/></svg>
+          </a>
+          {%- endif %}
+        </div>
         {%- endif %}
       </div>
     </div>
