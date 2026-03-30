@@ -15,11 +15,11 @@ description: All verified Florida rabbit rescue organizations — mission statem
 </div>
 
 <div class="disclaimer">
-  <strong>Note:</strong> This directory does not rank or score rescue organizations. Information is presented as objective, publicly verifiable facts. Organizations are listed by years active (longest first) as a neutral ordering method.
+  <strong>Note:</strong> This directory does not rank or score rescue organizations. Information is presented as objective, publicly verifiable facts. Organizations are listed alphabetically.
 </div>
 
 <div class="directory-list">
-  {%- for org in directory.organizations | sortByYearsActive %}
+  {%- for org in directory.organizations | sortByName %}
   <article class="directory-card" id="{{ org.id }}">
     <div class="card-header">
       <div class="card-header-info">
@@ -45,9 +45,7 @@ description: All verified Florida rabbit rescue organizations — mission statem
           {%- if org.nonprofit.status == "confirmed" or org.nonprofit.status == "confirmed_via_guidestar" %}Confirmed{% else %}{{ org.nonprofit.status_label }}{% endif -%}
         </div>
         <div class="fact-sub">
-          {%- if org.nonprofit.ein %}EIN: {{ org.nonprofit.ein }}{% endif -%}
-          {%- if org.nonprofit.guidestar_seal %} · {{ org.nonprofit.guidestar_seal }}{% endif -%}
-          {%- if org.nonprofit.guidestar_note and not org.nonprofit.guidestar_seal %} · {{ org.nonprofit.guidestar_note }}{% endif -%}
+          {%- if org.nonprofit.ein %}EIN: {% if org.nonprofit.candid_url %}<a href="{{ org.nonprofit.candid_url }}" target="_blank" rel="noopener">{{ org.nonprofit.ein }}</a>{% else %}{{ org.nonprofit.ein }}{% endif %}{% endif -%}
         </div>
         {%- if org.nonprofit.sunbiz_document_number %}
         <div class="fact-sub">Sunbiz: {% if org.nonprofit.sunbiz_url %}<a href="{{ org.nonprofit.sunbiz_url }}" target="_blank" rel="noopener">{{ org.nonprofit.sunbiz_document_number }}</a>{% else %}{{ org.nonprofit.sunbiz_document_number }}{% endif %}</div>
