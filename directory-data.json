@@ -204,6 +204,10 @@
         "sunbiz_principals_count": 6,
         "notes": "Long-established 501(c)(3); board existence required by FL law. Individual names not published on website or GuideStar."
       },
+      "contact": {
+        "email": "GVRabbitRescue@gmail.com",
+        "phone": null
+      },
       "species_focus": "rabbits_only",
       "model": "foster_and_facility",
       "last_verified": "2026-03"
@@ -247,6 +251,10 @@
         "status_label": "Publicly listed",
         "notes": "Named board members and roles \u2014 including Secretary of the Board \u2014 are listed on the About Us page at orlandorabbit.org."
       },
+      "contact": {
+        "email": "info@orlandorabbit.org",
+        "phone": null
+      },
       "species_focus": "rabbits_only",
       "model": "foster_only",
       "last_verified": "2026-03"
@@ -289,6 +297,10 @@
         "notes": "Three named board members listed on tbhrr.org/about-us/board-of-directors/: President (Licensed HRS Educator), Secretary (Co-Founder), and Vice President."
       },
       "hrs_connection": "Licensed HRS Educator on Board of Directors; explicitly states alliance with House Rabbit Society",
+      "contact": {
+        "email": "info@tbhrr.org",
+        "phone": null
+      },
       "species_focus": "rabbits_only",
       "model": "foster_only",
       "last_verified": "2026-03"
@@ -329,6 +341,11 @@
         "status": "publicly_listed",
         "status_label": "Publicly listed",
         "notes": "Six named board members and roles listed on the About page at respectforrabbits.org: President, Vice-President, Treasurer, Secretary, Director, and Medical Director (DVM)."
+      },
+      "contact": {
+        "email": "swflrabbits@gmail.com",
+        "phone": "(941) 499-7197",
+        "phone_note": "Call or text"
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
@@ -374,6 +391,10 @@
         "sunbiz_principals_count": 3,
         "notes": "GuideStar explicitly notes 'no recorded board members.' Website does not list board. FL corporate records show 3 active principals as required by law."
       },
+      "contact": {
+        "email": "contact@EastCoastRabbitRescue.org",
+        "phone": "(561) 440-3652"
+      },
       "species_focus": "rabbits_only",
       "model": "foster_only",
       "last_verified": "2026-03"
@@ -414,6 +435,10 @@
         "status_label": "Not found in public records",
         "sunbiz_principals_count": 3,
         "notes": "No board listing found on website or in public filings."
+      },
+      "contact": {
+        "email": "info@pennyandwild.org",
+        "phone": null
       },
       "species_note": "Also rescues guinea pigs in addition to rabbits",
       "species_focus": "rabbits_and_guinea_pigs",
@@ -460,6 +485,10 @@
         "sunbiz_principals_count": 3,
         "notes": "No dedicated website; no board information available publicly. No listing on GuideStar governance section."
       },
+      "contact": {
+        "email": "Spacecoastbunnies@gmail.com",
+        "phone": null
+      },
       "species_focus": "rabbits_only",
       "model": "foster_only",
       "last_verified": "2026-03"
@@ -503,6 +532,10 @@
         "sunbiz_principals_count": 3,
         "notes": "Florida Division of Corporations records (search.sunbiz.org) show 3 active principals \u2014 the legal minimum. Names verifiable via public record. Not listed on their website."
       },
+      "contact": {
+        "email": "bebettesbunnyrescue@gmail.com",
+        "phone": "(904) 335-8273"
+      },
       "species_focus": "rabbits_only",
       "model": "foster_only",
       "last_verified": "2026-03"
@@ -542,6 +575,10 @@
         "status_label": "Not found in public records",
         "sunbiz_principals_count": 1,
         "notes": "No board information on website or public filings. Note: organization also advocates for guinea pig education; rescue operations appear to be rabbit-focused."
+      },
+      "contact": {
+        "email": "hollyhopsrrr@gmail.com",
+        "phone": "(814) 450-6656"
       },
       "species_note": "Rescue is rabbit-focused; website includes guinea pig education as a secondary interest",
       "species_focus": "rabbits_primary",
@@ -592,6 +629,10 @@
         "sunbiz_principals_count": 3,
         "notes": "No board information on website or in any public filing. Organization is less than one year old."
       },
+      "contact": {
+        "email": "info@southeastflrabbitrescue.org",
+        "phone": null
+      },
       "species_note": "Rescues both rabbits and guinea pigs",
       "species_focus": "rabbits_and_guinea_pigs",
       "model": "foster_only",
@@ -638,6 +679,10 @@
         "sunbiz_principals_count": 3,
         "notes": "CEO: Vanessa A. Chaves (founder), COO: Desiree Razon, CFO/Secretary: Adam W. Hill. ~12 consistent volunteers. Annual report filed April 2025."
       },
+      "contact": {
+        "email": "fortwilburbuns@yahoo.com",
+        "phone": null
+      },
       "species_focus": "rabbits_only",
       "model": "foster_and_rehabilitation",
       "caveats": [
@@ -679,6 +724,10 @@
         "status_label": "Not yet reviewed",
         "notes": "Sunbiz principals not yet reviewed"
       },
+      "contact": {
+        "email": "thecarrotpatchrescue@gmail.com",
+        "phone": null
+      },
       "species_focus": "rabbits_and_small_animals",
       "model": "sanctuary",
       "caveats": [],
@@ -717,6 +766,11 @@
         "status": "not_reviewed",
         "status_label": "Not yet reviewed",
         "notes": "Sunbiz principals not yet reviewed"
+      },
+      "contact": {
+        "email": "dana@miami.edu",
+        "phone": null,
+        "contact_note": "Dana Krempels, H.A.R.E. founder"
       },
       "species_focus": "rabbits_only",
       "model": "foster_and_sanctuary",
@@ -759,6 +813,12 @@
         "status_label": "Not found in public records",
         "notes": "No Florida corporate filing on record"
       },
+      "contact": {
+        "email": "brsadoptions@att.net",
+        "phone": "(321) 952-2875",
+        "phone_text": "(321) 978-1483",
+        "phone_note": "Call (321) 952-2875 or text (321) 978-1483"
+      },
       "species_focus": "rabbits_only",
       "model": "rescue_and_rehome",
       "caveats": [
@@ -797,6 +857,11 @@
         "status": "not_reviewed",
         "status_label": "Not yet reviewed",
         "notes": "Sunbiz principals not yet reviewed"
+      },
+      "contact": {
+        "email": null,
+        "phone": null,
+        "contact_note": "No website or social media presence found"
       },
       "species_focus": "rabbits_only",
       "model": "unknown",
