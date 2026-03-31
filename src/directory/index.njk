@@ -6,11 +6,11 @@ description: All verified Florida rabbit rescue organizations — mission statem
 
 <section class="directory-hero">
   <h1>Florida Rabbit Rescue Directory</h1>
-  <p>{{ directory.organizations | length }} verified nonprofit rabbit rescue organizations, sorted by years active.</p>
+  <p>{{ directory.organizations | length }} rabbit rescue organizations in Florida.</p>
 </section>
 
 <div class="directory-intro">
-  <p>Every organization listed below is a confirmed 501(c)(3) nonprofit operating in the state of Florida. Listings include mission statements (verbatim where possible), founding dates, tax-exempt status, and board transparency details, all verified against publicly available records.</p>
+  <p>Listings include mission statements (verbatim where possible), founding dates, tax-exempt status, and board transparency details where available — all sourced from publicly available records. Not every organization listed has confirmed 501(c)(3) status; each listing indicates what has been verified.</p>
   <p>This directory was last verified in <strong>{{ directory.meta.last_verified }}</strong>. If you represent an organization listed here and need to update your information, please <a href="/contact/">contact us</a>.</p>
 </div>
 
@@ -28,15 +28,25 @@ description: All verified Florida rabbit rescue organizations — mission statem
         <div class="org-area">{{ org.service_area }}</div>
       </div>
       <div class="card-badge-col">
+        {%- if org.nonprofit.status == "confirmed" or org.nonprofit.status == "confirmed_via_guidestar" %}
         <span class="badge badge-green">✓ 501(c)(3)</span>
+        {%- elif org.nonprofit.status == "inactive" %}
+        <span class="badge badge-muted">Sunbiz Inactive</span>
+        {%- else %}
+        <span class="badge badge-muted">501(c)(3) Not Confirmed</span>
+        {%- endif %}
+        {%- if org.founded %}
         <span class="badge badge-earth">Est. {{ org.founded }}</span>
+        {%- endif %}
       </div>
     </div>
 
+    {%- if org.mission_statement %}
     <div class="card-mission">
       <div class="card-field-label">Mission statement</div>
       <div class="card-mission-text">"{{ org.mission_statement }}"</div>
     </div>
+    {%- endif %}
 
     <div class="card-facts">
       <div class="fact-cell">
@@ -44,17 +54,24 @@ description: All verified Florida rabbit rescue organizations — mission statem
         <div class="fact-value">
           {%- if org.nonprofit.status == "confirmed" or org.nonprofit.status == "confirmed_via_guidestar" %}Confirmed{% else %}{{ org.nonprofit.status_label }}{% endif -%}
         </div>
-        <div class="fact-sub">
-          {%- if org.nonprofit.ein %}EIN: {% if org.nonprofit.candid_url %}<a href="{{ org.nonprofit.candid_url }}" target="_blank" rel="noopener">{{ org.nonprofit.ein }}</a>{% else %}{{ org.nonprofit.ein }}{% endif %}{% endif -%}
-        </div>
+        {%- if org.nonprofit.ein %}
+        <div class="fact-sub">EIN: {% if org.nonprofit.candid_url %}<a href="{{ org.nonprofit.candid_url }}" target="_blank" rel="noopener">{{ org.nonprofit.ein }}</a>{% else %}{{ org.nonprofit.ein }}{% endif %}</div>
+        {%- endif %}
         {%- if org.nonprofit.sunbiz_document_number %}
         <div class="fact-sub">Sunbiz: {% if org.nonprofit.sunbiz_url %}<a href="{{ org.nonprofit.sunbiz_url }}" target="_blank" rel="noopener">{{ org.nonprofit.sunbiz_document_number }}</a>{% else %}{{ org.nonprofit.sunbiz_document_number }}{% endif %}</div>
+        {%- endif %}
+        {%- if org.nonprofit.sunbiz_note %}
+        <div class="fact-sub">{{ org.nonprofit.sunbiz_note }}</div>
         {%- endif %}
       </div>
       <div class="fact-cell">
         <div class="card-field-label">In operation</div>
+        {%- if org.founded %}
         <div class="fact-value">Since {{ org.founded }}</div>
         <div class="fact-sub">{{ org.years_active }} year{{ "s" if org.years_active != 1 }} active</div>
+        {%- else %}
+        <div class="fact-value">Unknown</div>
+        {%- endif %}
       </div>
       <div class="fact-cell">
         <div class="card-field-label">Model</div>
@@ -142,6 +159,17 @@ description: All verified Florida rabbit rescue organizations — mission statem
     <li>
       <strong>{{ org.name }}</strong>
       {%- if org.url %} · <a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://", "") }}</a>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+
+  <h2>Shelters, Humane Societies, SPCAs, and County Services</h2>
+  <p class="excluded-intro">The following shelters and government animal services may have rabbits available for adoption. Contact them directly to ask about rabbit availability.</p>
+  <ul>
+    {%- for org in directory.shelters_and_services | sortByName %}
+    <li>
+      <strong>{{ org.name }}</strong>
+      {%- if org.url %} · <a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://www.", "") | replace("https://", "") }}</a>{% endif %}
     </li>
     {%- endfor %}
   </ul>

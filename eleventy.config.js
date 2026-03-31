@@ -8,7 +8,11 @@ export default function(eleventyConfig) {
       "foster_only": "Foster-Based",
       "foster_and_facility": "Foster + Facility",
       "home_sanctuary": "Home-Based Sanctuary",
-      "foster_and_rehabilitation": "Foster + Rehabilitation"
+      "foster_and_rehabilitation": "Foster + Rehabilitation",
+      "sanctuary": "Sanctuary",
+      "foster_and_sanctuary": "Foster + Sanctuary",
+      "rescue_and_rehome": "Rescue & Rehome",
+      "unknown": "Not yet confirmed"
     };
     return map[model] || model;
   });
@@ -19,7 +23,9 @@ export default function(eleventyConfig) {
       "rabbits_primary": "Rabbits (primary)",
       "rabbits_and_guinea_pigs": "Rabbits & guinea pigs",
       "multi_animal": "Multi-animal rescue",
-      "farm_sanctuary": "Farm & animal sanctuary"
+      "farm_sanctuary": "Farm & animal sanctuary",
+      "rabbits_and_small_animals": "Rabbits & small animals",
+      "small_animals": "Small animals"
     };
     return map[focus] || focus;
   });

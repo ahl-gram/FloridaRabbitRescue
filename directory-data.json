@@ -134,6 +134,36 @@
       "name": "CudaBear's Lair Animal Sanctuary",
       "reason": "Farm and animal sanctuary — primarily pigs, goats, horses, emus, reptiles, and cats; not rabbit-focused",
       "url": "https://www.cudabearslairanimalsanctuary.org"
+    },
+    {
+      "name": "Farmhouse Animal & Nature Sanctuary",
+      "reason": "Multi-species sanctuary in Myakka City, FL — exotic and farm animals including rabbits; 501(c)(3) nonprofit",
+      "url": "https://farmhousesanctuary.org/"
+    },
+    {
+      "name": "H&S Homestead Exotic and Livestock Rescue",
+      "reason": "Exotic and livestock rescue in LaBelle, FL — 501(c)(3) nonprofit since 2023; rescuing since 2020",
+      "url": "https://www.facebook.com/floridahshomestead/"
+    },
+    {
+      "name": "Redemptive Love Farm & Rescue",
+      "reason": "Farm sanctuary and rescue in Tallahassee, FL — 100+ animals; 501(c)(3) nonprofit; rehomes over 200 rescue animals per year",
+      "url": "https://redemptivelovefarm.com/"
+    },
+    {
+      "name": "Saving Sage Animal Rescue Foundation",
+      "reason": "Multi-animal rescue in Lauderhill, FL — 501(c)(3) nonprofit since 2014; 30,000+ animals saved",
+      "url": "https://www.savingsagerescue.org"
+    },
+    {
+      "name": "The Runaways Animal Rescue",
+      "reason": "Multi-animal rescue in Port Richey, FL — 501(c)(3) nonprofit; 7,000 sq ft facility in Pasco County",
+      "url": "https://www.runawaysanimalrescue.org"
+    },
+    {
+      "name": "Bunny Boss",
+      "reason": "Small animal rescue in DeLand, FL — offers rescue alongside other services; no Florida corporate filing or 501(c)(3) on record",
+      "url": "https://www.bunnybossrescue.com"
     }
   ],
   "organizations": [
@@ -614,7 +644,191 @@
         "Only accepts rabbits from other 501(c)(3) rescues and state shelters — does not take surrenders from the general public"
       ],
       "last_verified": "2026-03"
+    },
+    {
+      "id": "mcprr",
+      "name": "Marley's Carrot Patch Rabbit Rescue",
+      "short_name": "Marley's Carrot Patch",
+      "location": {
+        "city": "Jennings",
+        "state": "FL",
+        "region": "North Florida"
+      },
+      "service_area": "North Florida",
+      "website": "https://causes.worldpeacemeet.com/carrotpatch/",
+      "social": {
+        "facebook": "https://www.facebook.com/carrotpatchrabbitrescue/"
+      },
+      "mission_statement": "Rescue of rabbits and other small animals, adoption of adoptable rabbits and small animals, sanctuary and perpetual care of non-adoptable animals, and education of rabbit and small animal care.",
+      "mission_source": "Charity Navigator / eBay for Charity profile",
+      "nonprofit": {
+        "status": "confirmed",
+        "status_label": "Confirmed 501(c)(3)",
+        "ein": "47-4477235",
+        "candid_url": null,
+        "ein_note": null,
+        "guidestar_note": "990-N filer (under $50k revenue)",
+        "sunbiz_document_number": "N15000006536",
+        "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=MARLEYSCARROTPATCHRABBITRESCUE%20N150000065360&aggregateId=domnp-n15000006536-1fa089c7-0332-40f8-8497-1ffaee26755b&searchTerm=Marley%27s%20Carrot%20Patch%20&listNameOrder=MARLEYSCARROTPATCHRABBITRESCUE%20N150000065360"
+      },
+      "founded": 2015,
+      "years_active": 11,
+      "founded_source": "Sunbiz filing date 06/30/2015; IRS ruling year 2016",
+      "board": {
+        "status": "not_reviewed",
+        "status_label": "Not yet reviewed",
+        "notes": "Sunbiz principals not yet reviewed"
+      },
+      "species_focus": "rabbits_and_small_animals",
+      "model": "sanctuary",
+      "caveats": [],
+      "last_verified": "2026-03"
+    },
+    {
+      "id": "hare",
+      "name": "Houserabbit Adoption, Rescue and Education",
+      "short_name": "H.A.R.E.",
+      "location": {
+        "city": "Miami / Coral Gables",
+        "state": "FL",
+        "region": "South Florida"
+      },
+      "service_area": "South Florida",
+      "website": "https://hare.as.miami.edu/",
+      "social": {
+        "facebook": "https://www.facebook.com/p/HouseRabbit-Adoption-Rescue-and-Education-HARE-Inc-100064830242876/"
+      },
+      "mission_statement": "To rescue and rehabilitate injured, neglected, and abandoned domestic rabbits. Advocates for spaying/neutering all domestic rabbits and caring for them indoors as family members. Provides permanent sanctuary for rabbits with disabilities and care for unreleasable wild lagomorphs.",
+      "mission_source": "hare.as.miami.edu",
+      "nonprofit": {
+        "status": "confirmed",
+        "status_label": "Confirmed 501(c)(3)",
+        "ein": "20-2408957",
+        "candid_url": null,
+        "ein_note": null,
+        "guidestar_note": "990-N filer (under $50k revenue); tax-exempt since November 2006",
+        "sunbiz_document_number": "N04000011513",
+        "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=HOUSERABBITADOPTIONRESCUEEDUCA%20N040000115131&aggregateId=domnp-n04000011513-10aeeb50-6950-4f0f-bcde-b66ec2206df1&searchTerm=house%20rabbit%20adoption&listNameOrder=HOUSERABBITADOPTIONRESCUEEDUCA%20N040000115130"
+      },
+      "founded": 2004,
+      "years_active": 22,
+      "founded_source": "Sunbiz filing date 12/10/2004; IRS tax-exempt since November 2006",
+      "board": {
+        "status": "not_reviewed",
+        "status_label": "Not yet reviewed",
+        "notes": "Sunbiz principals not yet reviewed"
+      },
+      "species_focus": "rabbits_only",
+      "model": "foster_and_sanctuary",
+      "caveats": [
+        "Affiliated with the University of Miami",
+        "Website appears dated — current activity level not yet confirmed"
+      ],
+      "last_verified": "2026-03"
+    },
+    {
+      "id": "brs",
+      "name": "Bugsy's Rabbit Sanctuary",
+      "short_name": "Bugsy's",
+      "location": {
+        "city": "Central Florida",
+        "state": "FL",
+        "region": "Central Florida"
+      },
+      "service_area": "Central Florida",
+      "website": "https://adoptabun.org",
+      "social": {
+        "instagram": "https://www.instagram.com/brs_adoptions/"
+      },
+      "mission_statement": "To rescue, rehabilitate, and re-home unwanted, abused, or neglected rabbits through public outreach events, online information, and school and nursing home visits.",
+      "mission_source": "adoptabun.org/about-us",
+      "nonprofit": {
+        "status": "not_found",
+        "status_label": "No 501(c)(3) or Sunbiz filing found",
+        "ein": null,
+        "candid_url": null,
+        "ein_note": "No EIN found in public databases",
+        "sunbiz_document_number": null,
+        "sunbiz_url": null
+      },
+      "founded": 2013,
+      "years_active": 13,
+      "founded_source": "adoptabun.org/about-us — 'founded in 2013'",
+      "board": {
+        "status": "not_found",
+        "status_label": "Not found in public records",
+        "notes": "No Florida corporate filing on record"
+      },
+      "species_focus": "rabbits_only",
+      "model": "rescue_and_rehome",
+      "caveats": [
+        "No Florida corporate filing or 501(c)(3) status on record"
+      ],
+      "last_verified": "2026-03"
+    },
+    {
+      "id": "hbr",
+      "name": "Happy Bunny Rescue",
+      "short_name": "Happy Bunny",
+      "location": {
+        "city": "Miami",
+        "state": "FL",
+        "region": "South Florida"
+      },
+      "service_area": "South Florida (Miami-Dade County)",
+      "website": null,
+      "social": {},
+      "mission_statement": null,
+      "mission_source": null,
+      "nonprofit": {
+        "status": "inactive",
+        "status_label": "Sunbiz filing inactive",
+        "ein": null,
+        "candid_url": null,
+        "ein_note": "No EIN on Sunbiz filing",
+        "sunbiz_document_number": "N23000014374",
+        "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=HAPPYBUNNYRESCUE%20N230000143740&aggregateId=domnp-n23000014374-a17a70c3-a6b3-49db-88c7-c3e6ea6865a8&searchTerm=Happy%20Bunny%20Rescue&listNameOrder=HAPPYBUNNYRESCUE%20L230002055680",
+        "sunbiz_note": "Admin dissolution for annual report, 09/27/2024"
+      },
+      "founded": 2023,
+      "years_active": 3,
+      "founded_source": "Sunbiz effective date 04/20/2023; filed 11/29/2023",
+      "board": {
+        "status": "not_reviewed",
+        "status_label": "Not yet reviewed",
+        "notes": "Sunbiz principals not yet reviewed"
+      },
+      "species_focus": "rabbits_only",
+      "model": "unknown",
+      "caveats": [
+        "Sunbiz filing is inactive — admin dissolution for annual report (September 2024)",
+        "No website or active social media presence found",
+        "No 501(c)(3) status on record"
+      ],
+      "last_verified": "2026-03"
     }
   ],
-  "organizations_watching": []
+  "organizations_watching": [],
+  "shelters_and_services": [
+    { "name": "Brevard Humane Society", "url": "https://brevardhumanesociety.org/" },
+    { "name": "Coral Springs Humane Unit", "url": "https://www.facebook.com/CoralSpringsHumaneUnit/" },
+    { "name": "Flagler Humane Society", "url": "https://flaglerhumanesociety.org/" },
+    { "name": "Florida Keys SPCA", "url": "https://fkspca.org/" },
+    { "name": "H.A.L.O. No-Kill Rescue", "url": "https://halorescuefl.org/" },
+    { "name": "Humane Society at Lakewood Ranch", "url": "https://hslwr.org/" },
+    { "name": "Humane Society of Broward County", "url": "https://humanebroward.com/" },
+    { "name": "Humane Society of North Central Florida", "url": "https://www.humanesocietyncfl.org/" },
+    { "name": "Humane Society of Pinellas", "url": "https://www.humanesocietyofpinellas.org/" },
+    { "name": "Humane Society of Tampa Bay", "url": "https://humanesocietytampa.org/" },
+    { "name": "Humane Society of the Treasure Coast", "url": "https://hstc1.org/" },
+    { "name": "Humane Society of Vero Beach & Indian River County", "url": "https://hsvb.org/" },
+    { "name": "Lee County Domestic Animal Services", "url": "https://www.leegov.com/animalservices" },
+    { "name": "Leon County Humane Society", "url": "https://www.leoncountyhumane.org/" },
+    { "name": "Palm Beach County Animal Care and Control", "url": "https://discover.pbc.gov/publicsafety/animalcare/pages/default.aspx" },
+    { "name": "Patty Baker Humane Society Naples", "url": "https://pbhsnaples.org/" },
+    { "name": "Seminole County Animal Services", "url": "https://www.seminolecountyfl.gov/departments-services/prepare-seminole/animal-services" },
+    { "name": "SPCA Florida", "url": "https://www.spcaflorida.org/" },
+    { "name": "SPCA Tampa Bay", "url": "https://spcatampabay.org/" },
+    { "name": "Tallahassee Animal Services", "url": "https://www.talgov.com/animals/animalservices" }
+  ]
 }

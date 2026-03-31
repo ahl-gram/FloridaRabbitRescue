@@ -2,5 +2,7 @@ node_modules/
 _site/
 .DS_Store
 outreach.csv
+outreach-*.txt
+template.txt
 SESSION-NOTES.md
 RESUME-HERE.md

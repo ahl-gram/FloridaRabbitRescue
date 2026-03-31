@@ -530,6 +530,7 @@ a:hover { color: var(--green-700); text-decoration: underline; }
 }
 .badge-green { background: var(--green-100); color: var(--green-700); border-color: var(--green-300); }
 .badge-earth { background: var(--earth-100); color: var(--earth-700); border-color: var(--earth-200); }
+.badge-muted { background: #f5f0eb; color: #7a6e62; border-color: #d9cfc4; }
 
 .card-mission {
   padding: 1.25rem 1.75rem;
