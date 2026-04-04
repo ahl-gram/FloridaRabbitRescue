@@ -68,7 +68,7 @@ description: All verified Florida rabbit rescue organizations — mission statem
         <div class="card-field-label">In operation</div>
         {%- if org.founded %}
         <div class="fact-value">Since {{ org.founded }}</div>
-        <div class="fact-sub">{{ org.years_active }} year{{ "s" if org.years_active != 1 }} active</div>
+        <div class="fact-sub">{{ org.founded | yearsActive }} year{{ "s" if (org.founded | yearsActive) != 1 }} active</div>
         {%- else %}
         <div class="fact-value">Unknown</div>
         {%- endif %}

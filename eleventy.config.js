@@ -30,6 +30,10 @@ export default function(eleventyConfig) {
     return map[focus] || focus;
   });
 
+  eleventyConfig.addFilter("yearsActive", function(founded) {
+    return new Date().getFullYear() - founded;
+  });
+
   eleventyConfig.addFilter("friendlyMonth", function(value) {
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     const [year, month] = value.split("-");
