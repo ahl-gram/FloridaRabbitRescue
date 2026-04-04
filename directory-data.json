@@ -667,7 +667,7 @@
         "guidestar_note": "990-N filer (under $50k revenue)",
         "sunbiz_document_number": "N19000007249",
         "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=FORTWILBURRABBITRESOURCES%20N190000072491&aggregateId=domnp-n19000007249-5f297fa2-1385-4d6a-9efb-a4417a73c9be&searchTerm=fort%20wilbur&listNameOrder=FORTWILBURRABBITRESCUE%20N190000072490",
-        "sunbiz_note": "Name changed from 'Fort Wilbur Rabbit Rescue' to 'Fort Wilbur Rabbit Resources, Inc.' on 01/16/2024"
+        "sunbiz_note": null
       },
       "founded": 2011,
       "founded_formal": 2019,
@@ -686,7 +686,8 @@
       "species_focus": "rabbits_only",
       "model": "foster_and_rehabilitation",
       "caveats": [
-        "Only accepts rabbits from other 501(c)(3) rescues and state shelters — does not take surrenders from the general public"
+        "Only accepts rabbits from other 501(c)(3) rescues and state shelters — does not take surrenders from the general public",
+        "Formerly known as Fort Wilbur Rabbit Rescue — renamed to Fort Wilbur Rabbit Resources in January 2024"
       ],
       "last_verified": "2026-03"
     },
@@ -710,7 +711,7 @@
         "status": "confirmed",
         "status_label": "Confirmed 501(c)(3)",
         "ein": "47-4477235",
-        "candid_url": null,
+        "candid_url": "https://app.candid.org/profile/9556737/marleys-carrot-patch-rabbit-rescue-inc-47-4477235",
         "ein_note": null,
         "guidestar_note": "990-N filer (under $50k revenue)",
         "sunbiz_document_number": "N15000006536",
@@ -753,7 +754,7 @@
         "status": "confirmed",
         "status_label": "Confirmed 501(c)(3)",
         "ein": "20-2408957",
-        "candid_url": null,
+        "candid_url": "https://app.candid.org/profile/7030762/houserabbit-adoption-rescue-and-education-inc-20-2408957",
         "ein_note": null,
         "guidestar_note": "990-N filer (under $50k revenue); tax-exempt since November 2006",
         "sunbiz_document_number": "N04000011513",
@@ -849,7 +850,7 @@
         "ein_note": "No EIN on Sunbiz filing",
         "sunbiz_document_number": "N23000014374",
         "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=HAPPYBUNNYRESCUE%20N230000143740&aggregateId=domnp-n23000014374-a17a70c3-a6b3-49db-88c7-c3e6ea6865a8&searchTerm=Happy%20Bunny%20Rescue&listNameOrder=HAPPYBUNNYRESCUE%20L230002055680",
-        "sunbiz_note": "Admin dissolution for annual report, 09/27/2024"
+        "sunbiz_note": null
       },
       "founded": 2023,
       "years_active": 3,
