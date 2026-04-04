@@ -794,7 +794,7 @@
       "social": {
         "instagram": "https://www.instagram.com/brs_adoptions/"
       },
-      "mission_statement": "To rescue, rehabilitate, and re-home unwanted, abused, or neglected rabbits through public outreach events, online information, and school and nursing home visits.",
+      "mission_statement": "To rescue, rehabilitate, and rehome domestic rabbits, and to provide education through community outreach.",
       "mission_source": "adoptabun.org/about-us",
       "nonprofit": {
         "status": "not_found",
@@ -822,9 +822,10 @@
       "species_focus": "rabbits_only",
       "model": "rescue_and_rehome",
       "caveats": [
-        "No Florida corporate filing or 501(c)(3) status on record"
+        "No Florida corporate filing or 501(c)(3) status on record",
+        "Currently on hiatus — not accepting new surrenders. Still active as a rabbit education and referral resource, connecting those looking to surrender or adopt with other local rescues."
       ],
-      "last_verified": "2026-03"
+      "last_verified": "2026-04"
     },
     {
       "id": "hbr",
