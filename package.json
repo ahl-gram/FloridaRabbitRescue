@@ -4,11 +4,12 @@
   "type": "module",
   "description": "Florida Rabbit Rescue Directory — static site",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve",
+    "build": "eleventy && pagefind --site _site",
+    "serve": "eleventy && pagefind --site _site && eleventy --serve",
     "clean": "rm -rf _site"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "pagefind": "^1.4.0"
   }
 }
