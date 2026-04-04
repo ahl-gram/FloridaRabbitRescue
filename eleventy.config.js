@@ -30,6 +30,12 @@ export default function(eleventyConfig) {
     return map[focus] || focus;
   });
 
+  eleventyConfig.addFilter("friendlyMonth", function(value) {
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const [year, month] = value.split("-");
+    return months[parseInt(month, 10) - 1] + " " + year;
+  });
+
   eleventyConfig.addFilter("sortByName", function(orgs) {
     return [...orgs].sort((a, b) => a.name.localeCompare(b.name));
   });

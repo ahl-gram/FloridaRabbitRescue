@@ -11,7 +11,7 @@ description: All verified Florida rabbit rescue organizations — mission statem
 
 <div class="directory-intro">
   <p>Listings include mission statements (verbatim where possible), founding dates, tax-exempt status, and board transparency details where available — all sourced from publicly available records. Not every organization listed has confirmed 501(c)(3) status; each listing indicates what has been verified.</p>
-  <p>This directory was last verified in <strong>{{ directory.meta.last_verified }}</strong>. If you represent an organization listed here and need to update your information, please <a href="/contact/">contact us</a>.</p>
+  <p>This directory was last verified in <strong>{{ directory.meta.last_verified | friendlyMonth }}</strong>. If you represent an organization listed here and need to update your information, please <a href="/contact/">contact us</a>.</p>
 </div>
 
 <div class="disclaimer">
@@ -128,7 +128,7 @@ description: All verified Florida rabbit rescue organizations — mission statem
     {%- endif %}
 
     <div class="card-footer-row">
-      <span class="verified-tag">Last verified: {{ org.last_verified }}</span>
+      <span class="verified-tag">Last verified: {{ org.last_verified | friendlyMonth }}</span>
       {%- if org.website %}
       <a class="card-cta" href="{{ org.website }}" target="_blank" rel="noopener">↗ {{ org.website | replace("https://www.", "") | replace("https://", "") }}</a>
       {%- elif org.linktree_url %}
