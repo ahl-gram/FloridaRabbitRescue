@@ -474,6 +474,7 @@ a:hover { color: var(--green-700); text-decoration: underline; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  scroll-margin-top: 5rem;
 }
 .card-header {
   padding: 1.5rem 1.75rem 1.25rem;
