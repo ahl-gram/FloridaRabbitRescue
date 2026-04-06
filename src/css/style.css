@@ -631,7 +631,7 @@ a:hover { color: var(--green-700); text-decoration: underline; }
   gap: 0.35rem;
   margin-top: 0.2rem;
 }
-.org-area::before { content: '\2194'; font-size: 0.7rem; color: var(--text-muted); }
+.org-area::before { content: ''; }
 .badge {
   font-size: 0.68rem;
   font-weight: 500;

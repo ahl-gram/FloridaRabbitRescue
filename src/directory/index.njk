@@ -24,8 +24,8 @@ description: All verified Florida rabbit rescue organizations — mission statem
     <div class="card-header">
       <div class="card-header-info">
         <div class="org-name"><a href="#{{ org.id }}" class="org-name-link">{{ org.name }}</a></div>
-        <div class="org-location">{{ org.location.city }}, {{ org.location.state }} · {{ org.location.region }}</div>
-        <div class="org-area">{{ org.service_area }}</div>
+        <div class="org-location">Based in {{ org.location.city }}, {{ org.location.state }}</div>
+        <div class="org-area">Serves {{ org.service_area }}</div>
       </div>
       <div class="card-badge-col">
         {%- if org.nonprofit.status == "confirmed" or org.nonprofit.status == "confirmed_via_guidestar" %}

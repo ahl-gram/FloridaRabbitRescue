@@ -172,11 +172,11 @@
       "name": "Gainesville Rabbit Rescue",
       "short_name": "GRR",
       "location": {
-        "city": "Gainesville / Williston",
+        "city": "Williston",
         "state": "FL",
         "region": "North Central Florida"
       },
-      "service_area": "Statewide via foster network; primary location North Central FL",
+      "service_area": "North Central Florida · May assist statewide via foster network",
       "website": "https://www.gainesvillerabbitrescue.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/williston/gainesville-rabbit-rescue-fl110/",
       "social": {
@@ -220,7 +220,7 @@
         "state": "FL",
         "region": "Central Florida"
       },
-      "service_area": "Central Florida; 100% foster-based",
+      "service_area": "Central Florida (Orange and Seminole Counties)",
       "website": "https://orlandorabbit.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/longwood/orlando-rabbit-care-adoptions-orca-fl140/",
       "social": {
@@ -262,11 +262,11 @@
       "name": "Tampa Bay House Rabbit Rescue",
       "short_name": "TBHRR",
       "location": {
-        "city": "Tampa Bay Area",
+        "city": "Tampa Bay",
         "state": "FL",
         "region": "West Central Florida"
       },
-      "service_area": "All of Florida; primarily West Coast; 100% foster-based",
+      "service_area": "the Tampa Bay area",
       "website": "https://tbhrr.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/brandon/tampa-bay-house-rabbit-rescue-fl1313/",
       "social": {
@@ -311,7 +311,7 @@
         "state": "FL",
         "region": "Southwest Florida"
       },
-      "service_area": "SW Florida (Lee and Collier counties primarily); foster-based network",
+      "service_area": "Lee and Collier Counties",
       "website": "https://www.respectforrabbits.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/naples/southwest-florida-house-rabbit-rescue-fl1441/",
       "social": {
@@ -356,7 +356,7 @@
         "state": "FL",
         "region": "Southeast Florida"
       },
-      "service_area": "Palm Beach, Broward, and Miami-Dade Counties",
+      "service_area": "Palm Beach, Broward, Miami-Dade, and Martin Counties",
       "website": "https://eastcoastrabbitrescue.org",
       "petfinder_url": "https://www.adoptapet.com/shelter/95759-east-coast-rabbit-rescue-west-palm-beach-florida",
       "social": {
@@ -399,11 +399,11 @@
       "name": "Penny & Wild Smalls of South Florida",
       "short_name": "Penny & Wild",
       "location": {
-        "city": "South Florida",
+        "city": "Miami",
         "state": "FL",
         "region": "Southeast Florida"
       },
-      "service_area": "Miami-Dade, Broward, and Palm Beach Counties; 100% foster-based",
+      "service_area": "Miami-Dade, Broward, and Palm Beach Counties",
       "website": "https://pennyandwild.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/miami/penny-and-wild-smalls-of-south-florida-fl1733/",
       "social": {
@@ -448,7 +448,7 @@
         "state": "FL",
         "region": "Space Coast / East Central Florida"
       },
-      "service_area": "Brevard County (Space Coast); foster-based network",
+      "service_area": "Brevard County and surrounding areas",
       "website": null,
       "website_note": "No dedicated website. Primary online presence via Linktree, Facebook, Instagram, and Petfinder.",
       "linktree_url": "https://linktr.ee/spacecoastbunnies",
@@ -493,9 +493,9 @@
       "location": {
         "city": "Hilliard",
         "state": "FL",
-        "region": "Northeast Florida / Jacksonville Metro / Panhandle"
+        "region": "Northeast Florida / Jacksonville Metro"
       },
-      "service_area": "NE Florida and Jacksonville metro region as well as the Tallahassee area",
+      "service_area": "Nassau and Duval Counties (Jacksonville metro), Tallahassee, and the Panhandle",
       "website": "https://www.bebettesbunnyrescue.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/hilliard/bebettes-bunny-rescue-inc-fl1788/",
       "social": {
@@ -541,7 +541,7 @@
         "state": "FL",
         "region": "Central Florida"
       },
-      "service_area": "Central Florida; 100% foster-based",
+      "service_area": "Volusia, Seminole, and Orange Counties",
       "website": "https://www.hollyhops.org",
       "petfinder_url": "https://www.petfinder.com/member/us/fl/deltona/holly-hops-rabbit-rescue-and-rehabilitation-inc-fl1900/",
       "social": {
@@ -638,7 +638,7 @@
         "state": "FL",
         "region": "Northeast Florida / Volusia County"
       },
-      "service_area": "Statewide via foster network; free grooming in Volusia, Flagler, and Lake Counties; also assists shelters in Georgia and the Carolinas",
+      "service_area": "Volusia, Flagler, and Lake Counties · Statewide via foster network",
       "website": "https://avwahc.wixsite.com/fwrr",
       "website_note": "Primary Wix site; fortwilbur.org may have intermittent issues",
       "social": {
@@ -726,11 +726,11 @@
       "name": "Houserabbit Adoption, Rescue and Education",
       "short_name": "H.A.R.E.",
       "location": {
-        "city": "Miami / Coral Gables",
+        "city": "Coral Gables",
         "state": "FL",
         "region": "South Florida"
       },
-      "service_area": "South Florida",
+      "service_area": "South Florida · Statewide via foster and transport network",
       "website": "https://hare.as.miami.edu/",
       "social": {
         "facebook": "https://www.facebook.com/p/HouseRabbit-Adoption-Rescue-and-Education-HARE-Inc-100064830242876/"
@@ -772,11 +772,11 @@
       "name": "Bugsy's Rabbit Sanctuary",
       "short_name": "Bugsy's",
       "location": {
-        "city": "Central Florida",
+        "city": "Palm Bay",
         "state": "FL",
         "region": "Central Florida"
       },
-      "service_area": "Central Florida",
+      "service_area": "Brevard County (Central Florida)",
       "website": "https://adoptabun.org",
       "social": {
         "instagram": "https://www.instagram.com/brs_adoptions/"
@@ -822,7 +822,7 @@
         "state": "FL",
         "region": "South Florida"
       },
-      "service_area": "South Florida (Miami-Dade County)",
+      "service_area": "Miami-Dade County",
       "website": null,
       "social": {},
       "mission_statement": null,
