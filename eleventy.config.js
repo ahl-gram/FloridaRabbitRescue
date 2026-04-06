@@ -40,6 +40,10 @@ export default function(eleventyConfig) {
     return months[parseInt(month, 10) - 1] + " " + year;
   });
 
+  eleventyConfig.addFilter("slugify", function(str) {
+    return str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  });
+
   eleventyConfig.addFilter("sortByName", function(orgs) {
     return [...orgs].sort((a, b) => a.name.localeCompare(b.name));
   });

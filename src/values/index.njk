@@ -20,7 +20,7 @@ description: The beliefs that unite House Rabbit Society and Rabbit.org Foundati
     {%- for value in directory.shared_values.values %}
     <div class="value-card">
       <div class="value-card-header">
-        <div class="value-statement">{{ value.statement }}</div>
+        <h3 class="value-statement" id="{{ value.statement | slugify }}">{{ value.statement }}</h3>
         {%- if value.source == "both" %}
         <span class="value-source-tag tag-both">Both</span>
         {%- elif value.source == "hrs" %}
