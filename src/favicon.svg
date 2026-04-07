@@ -23,4 +23,11 @@
   <circle cx="18" cy="14" r="0.9" fill="#26422f"/>
   <!-- Nose -->
   <ellipse cx="16" cy="16.2" rx="0.6" ry="0.4" fill="#26422f"/>
+  <!-- Whiskers -->
+  <g stroke="#26422f" stroke-width="0.25" stroke-linecap="round" opacity="0.5">
+    <line x1="13.5" y1="15.8" x2="11" y2="15.2"/>
+    <line x1="13.5" y1="16.4" x2="11" y2="16.8"/>
+    <line x1="18.5" y1="15.8" x2="21" y2="15.2"/>
+    <line x1="18.5" y1="16.4" x2="21" y2="16.8"/>
+  </g>
 </svg>
