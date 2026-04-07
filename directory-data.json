@@ -97,11 +97,20 @@
     {
       "name": "Suncoast House Rabbit Rescue",
       "reason": "Officially closed October 2025",
-      "url": "https://suncoasthrr.org"
+      "url": "https://suncoasthrr.org",
+      "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=SUNCOASTHOUSERABBITRESCUE%20N190000009730&aggregateId=domnp-n19000000973-e4e62ff0-adb8-4e84-abb8-0289d757e8a1&searchTerm=suncoast%20house%20rabbit&listNameOrder=SUNCOASTHOUSERABBITRESCUE%20N190000009730",
+      "show_in_ui": true
     },
     {
       "name": "North Florida Rabbit Rescue",
-      "reason": "Permanently closed due to medical concerns"
+      "reason": "Permanently closed due to medical concerns",
+      "show_in_ui": false
+    },
+    {
+      "name": "Happy Bunny Rescue",
+      "reason": "Sunbiz filing inactive, admin dissolution September 2024. No website or social media presence found.",
+      "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=HAPPYBUNNYRESCUE%20N230000143740&aggregateId=domnp-n23000014374-a17a70c3-a6b3-49db-88c7-c3e6ea6865a8&searchTerm=Happy%20Bunny%20Rescue&listNameOrder=HAPPYBUNNYRESCUE%20L230002055680",
+      "show_in_ui": true
     }
   ],
   "excluded_organizations": [
@@ -812,51 +821,6 @@
         "Currently on hiatus — not accepting new surrenders. Still active as a rabbit education and referral resource, connecting those looking to surrender or adopt with other local rescues."
       ],
       "last_verified": "2026-04"
-    },
-    {
-      "id": "hbr",
-      "name": "Happy Bunny Rescue",
-      "short_name": "Happy Bunny",
-      "location": {
-        "city": "Miami",
-        "state": "FL",
-        "region": "South Florida"
-      },
-      "service_area": "Miami-Dade County",
-      "website": null,
-      "social": {},
-      "mission_statement": null,
-      "mission_source": null,
-      "nonprofit": {
-        "status": "inactive",
-        "status_label": "Sunbiz filing inactive",
-        "ein": null,
-        "candid_url": null,
-        "ein_note": "No EIN on Sunbiz filing",
-        "sunbiz_document_number": "N23000014374",
-        "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=HAPPYBUNNYRESCUE%20N230000143740&aggregateId=domnp-n23000014374-a17a70c3-a6b3-49db-88c7-c3e6ea6865a8&searchTerm=Happy%20Bunny%20Rescue&listNameOrder=HAPPYBUNNYRESCUE%20L230002055680",
-        "sunbiz_note": null
-      },
-      "founded": 2023,
-      "founded_source": "Sunbiz effective date 04/20/2023; filed 11/29/2023",
-      "board": {
-        "status": "not_reviewed",
-        "status_label": "Not yet reviewed",
-        "notes": "Sunbiz principals not yet reviewed"
-      },
-      "contact": {
-        "email": null,
-        "phone": null,
-        "contact_note": "No website or social media presence found"
-      },
-      "species_focus": "rabbits_only",
-      "model": "unknown",
-      "caveats": [
-        "Sunbiz filing is inactive — admin dissolution for annual report (September 2024)",
-        "No website or active social media presence found",
-        "No 501(c)(3) status on record"
-      ],
-      "last_verified": "2026-03"
     }
   ],
   "organizations_watching": [],

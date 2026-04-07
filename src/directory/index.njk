@@ -145,10 +145,13 @@ description: "All verified Florida rabbit rescue organizations: mission statemen
   <h2>Closed Organizations</h2>
   <ul>
     {%- for org in directory.closed_organizations %}
+    {%- if org.show_in_ui %}
     <li>
       <strong>{{ org.name }}</strong> — {{ org.reason }}
       {%- if org.url %} · <a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://", "") }}</a>{% endif %}
+      {%- if org.sunbiz_url %} · <a href="{{ org.sunbiz_url }}" target="_blank" rel="noopener">Sunbiz</a>{% endif %}
     </li>
+    {%- endif %}
     {%- endfor %}
   </ul>
 
