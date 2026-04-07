@@ -1,10 +1,7 @@
 node_modules/
 _site/
 .DS_Store
-outreach.csv
+planning/
 outreach-*.txt
-template.txt
 SESSION-NOTES.md
 RESUME-HERE.md
-launch-checklist.md
-outreach-email.md
