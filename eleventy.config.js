@@ -52,6 +52,10 @@ export default function(eleventyConfig) {
     return [...orgs].sort((a, b) => b.years_active - a.years_active);
   });
 
+  eleventyConfig.addFilter("trimTrailingSlash", function(str) {
+    return str.replace(/\/+$/, "");
+  });
+
   eleventyConfig.addFilter("groupByRegion", function(shelters) {
     const regionOrder = [
       "North Florida",

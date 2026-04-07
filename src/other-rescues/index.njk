@@ -19,7 +19,7 @@ description: "Florida organizations that rescue or care for rabbits alongside ot
     <h2 class="mini-card-name" id="{{ org.name | slugify }}">{{ org.name }}</h2>
     <p class="mini-card-desc">{{ org.reason }}</p>
     {%- if org.url %}
-    <a class="mini-card-link" href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://www.", "") | replace("https://", "") | replace("/", "") }} ↗</a>
+    <a class="mini-card-link" href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://www.", "") | replace("https://", "") | trimTrailingSlash }} ↗</a>
     {%- endif %}
   </div>
   {%- endfor %}
