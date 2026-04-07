@@ -19,7 +19,14 @@
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); this.nextElementSibling.classList.toggle('open')">☰</button>
     <ul class="nav-links">
       <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Home</a></li>
-      <li><a href="/directory/"{% if page.url == "/directory/" %} class="active"{% endif %}>Directory</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-toggle{% if page.url == '/directory/' or page.url == '/other-rescues/' or page.url == '/shelters/' %} active{% endif %}" aria-expanded="false" aria-haspopup="true">Directory <span class="nav-caret">&#9662;</span></button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/directory/"{% if page.url == "/directory/" %} class="active"{% endif %}>Rabbit Rescues</a></li>
+          <li><a href="/other-rescues/"{% if page.url == "/other-rescues/" %} class="active"{% endif %}>Other Organizations</a></li>
+          <li><a href="/shelters/"{% if page.url == "/shelters/" %} class="active"{% endif %}>Shelters & Services</a></li>
+        </ul>
+      </li>
       <li><a href="/values/"{% if page.url == "/values/" %} class="active"{% endif %}>Values</a></li>
       <li><a href="/before-you-adopt/"{% if page.url == "/before-you-adopt/" %} class="active"{% endif %}>Before You Adopt</a></li>
       <li><a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a></li>
@@ -35,6 +42,30 @@
     showSubResults: true,
     showImages: false,
     resetStyles: false
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var li = btn.closest('.nav-dropdown');
+      var open = li.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      // close other dropdowns
+      document.querySelectorAll('.nav-dropdown').forEach(function(other) {
+        if (other !== li) {
+          other.classList.remove('open');
+          other.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  });
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.nav-dropdown').forEach(function(li) {
+      li.classList.remove('open');
+      li.querySelector('.nav-dropdown-toggle').setAttribute('aria-expanded', 'false');
+    });
   });
 </script>
 

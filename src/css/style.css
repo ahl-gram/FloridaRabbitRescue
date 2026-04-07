@@ -826,6 +826,7 @@ a:hover { color: var(--green-700); text-decoration: underline; }
     flex-direction: row;
     align-items: center;
   }
+  .directory-card { scroll-margin-top: 10rem; }
   .hero { padding: 3.5rem 1.5rem 3rem; }
   .hero-sub { font-size: 0.95rem; }
 }
@@ -1198,4 +1199,302 @@ a:hover { color: var(--green-700); text-decoration: underline; }
 }
 @media (max-width: 600px) {
   .resource-links { grid-template-columns: 1fr; }
+}
+
+/* ─────────────────────────────────────────
+   NAV DROPDOWN
+   ───────────────────────────────────────── */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-toggle {
+  color: var(--green-300);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.nav-dropdown-toggle:hover { color: var(--text-on-dark); background: rgba(255,255,255,0.08); }
+.nav-dropdown-toggle.active { color: var(--text-on-dark); }
+.nav-caret {
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+}
+.nav-dropdown.open .nav-caret {
+  transform: rotate(180deg);
+}
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  list-style: none;
+  min-width: 200px;
+  padding: 0.4rem 0;
+  z-index: 150;
+}
+.nav-dropdown.open .nav-dropdown-menu {
+  display: block;
+}
+.nav-dropdown-menu li { white-space: nowrap; }
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-transform: none;
+  letter-spacing: 0;
+  transition: background 0.15s;
+}
+.nav-dropdown-menu a:hover {
+  background: var(--green-50);
+  color: var(--green-700);
+  text-decoration: none;
+}
+.nav-dropdown-menu a.active {
+  color: var(--green-700);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .nav-dropdown-menu {
+    position: static;
+    transform: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 1rem;
+    min-width: 0;
+  }
+  .nav-dropdown-toggle {
+    padding: 0.75rem 1rem;
+  }
+  .nav-dropdown-menu a {
+    color: var(--green-300);
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+  }
+  .nav-dropdown-menu a:hover {
+    background: rgba(255,255,255,0.08);
+    color: var(--text-on-dark);
+  }
+  .nav-dropdown-menu a.active {
+    color: var(--text-on-dark);
+  }
+}
+
+/* ─────────────────────────────────────────
+   OTHER RESCUES PAGE — Mini Cards
+   ───────────────────────────────────────── */
+.other-rescues-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 0;
+}
+.other-rescues-intro p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.mini-card-grid {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.mini-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+.mini-card:hover {
+  border-color: var(--green-400);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+.mini-card-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.mini-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  flex: 1;
+}
+.mini-card-link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--green-600);
+  text-decoration: none;
+  margin-top: auto;
+}
+.mini-card-link:hover {
+  color: var(--green-700);
+  text-decoration: underline;
+}
+.other-rescues-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+@media (max-width: 600px) {
+  .mini-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─────────────────────────────────────────
+   SHELTERS PAGE — Regional Groups
+   ───────────────────────────────────────── */
+.shelters-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 0;
+}
+.shelters-intro p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.shelters-list {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.region-heading {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--green-200);
+}
+.shelter-rows {
+  display: flex;
+  flex-direction: column;
+}
+.shelter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+.shelter-row:first-child {
+  border-top: 1px solid var(--border);
+}
+.shelter-row:hover {
+  background: var(--green-50);
+  text-decoration: none;
+  color: inherit;
+}
+.shelter-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.shelter-arrow {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.shelter-row:hover .shelter-arrow {
+  color: var(--green-600);
+}
+.shelters-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* ─────────────────────────────────────────
+   DIRECTORY PAGE — See Also Cross-Links
+   ───────────────────────────────────────── */
+.directory-see-also {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.directory-see-also h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+.see-also-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.see-also-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.see-also-card:hover {
+  border-color: var(--green-400);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.see-also-card strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--green-700);
+}
+.see-also-card span {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+@media (max-width: 600px) {
+  .see-also-links { grid-template-columns: 1fr; }
 }

@@ -112,27 +112,27 @@
     },
     {
       "name": "Pawphanage for Wayward Pets",
-      "reason": "Multi-animal rescue (cats, dogs, hamsters, guinea pigs, rabbits) — not rabbit-focused; very small scale with minimal rabbit inventory",
+      "reason": "Multi-animal rescue serving cats, dogs, hamsters, guinea pigs, and rabbits",
       "url": "https://www.pawphanage.org"
     },
     {
       "name": "Live Freely Sanctuary",
-      "reason": "Multi-animal sanctuary focused on animals with disabilities — not rabbit-specific; questionable activity level (Sunbiz lapsed and reinstated, $0 reported assets/income, no website)",
+      "reason": "Multi-animal sanctuary focused on animals with disabilities",
       "url": "https://www.facebook.com/LiveFreelySanctuary"
     },
     {
       "name": "Palm Beach Rabbit, Guinea Pig, etc. Rescue",
-      "reason": "Not a standalone organization — operates as a program of Palm Beach Parrot & Bird Rescue Inc.; multi-animal (rabbits, guinea pigs, small animals alongside birds); no dedicated website",
+      "reason": "Small animal rescue program operated by Palm Beach Parrot & Bird Rescue Inc. — rabbits, guinea pigs, and other small animals",
       "url": "https://www.facebook.com/p/Palm-Beach-Rabbit-Guinea-Pig-etc-Rescue-100087635917494/"
     },
     {
       "name": "Floppy Ear Rescue & Sanctuary",
-      "reason": "Multi-animal rescue (rabbits, chinchillas, guinea pigs, reptiles); currently not accepting new surrenders due to limited space and resources",
+      "reason": "Multi-animal rescue specializing in rabbits, chinchillas, guinea pigs, and reptiles",
       "url": "https://www.floppyearrescue.org"
     },
     {
       "name": "CudaBear's Lair Animal Sanctuary",
-      "reason": "Farm and animal sanctuary — primarily pigs, goats, horses, emus, reptiles, and cats; not rabbit-focused",
+      "reason": "Farm and animal sanctuary — pigs, goats, horses, emus, reptiles, and cats",
       "url": "https://www.cudabearslairanimalsanctuary.org"
     },
     {
@@ -162,7 +162,7 @@
     },
     {
       "name": "Bunny Boss",
-      "reason": "Small animal rescue in DeLand, FL — offers rescue alongside other services; no Florida corporate filing or 501(c)(3) on record",
+      "reason": "Small animal rescue in DeLand, FL — offers rescue alongside other services",
       "url": "https://www.bunnybossrescue.com"
     }
   ],
@@ -863,83 +863,103 @@
   "shelters_and_services": [
     {
       "name": "Brevard Humane Society",
-      "url": "https://brevardhumanesociety.org/"
+      "url": "https://brevardhumanesociety.org/",
+      "region": "Central Florida"
     },
     {
       "name": "Coral Springs Humane Unit",
-      "url": "https://www.facebook.com/CoralSpringsHumaneUnit/"
+      "url": "https://www.facebook.com/CoralSpringsHumaneUnit/",
+      "region": "Southeast Florida & the Keys"
     },
     {
       "name": "Flagler Humane Society",
-      "url": "https://flaglerhumanesociety.org/"
+      "url": "https://flaglerhumanesociety.org/",
+      "region": "North Florida"
     },
     {
       "name": "Florida Keys SPCA",
-      "url": "https://fkspca.org/"
+      "url": "https://fkspca.org/",
+      "region": "Southeast Florida & the Keys"
     },
     {
       "name": "H.A.L.O. No-Kill Rescue",
-      "url": "https://halorescuefl.org/"
+      "url": "https://halorescuefl.org/",
+      "region": "Central Florida"
     },
     {
       "name": "Humane Society at Lakewood Ranch",
-      "url": "https://hslwr.org/"
+      "url": "https://hslwr.org/",
+      "region": "Tampa Bay Area"
     },
     {
       "name": "Humane Society of Broward County",
-      "url": "https://humanebroward.com/"
+      "url": "https://humanebroward.com/",
+      "region": "Southeast Florida & the Keys"
     },
     {
       "name": "Humane Society of North Central Florida",
-      "url": "https://www.humanesocietyncfl.org/"
+      "url": "https://www.humanesocietyncfl.org/",
+      "region": "North Florida"
     },
     {
       "name": "Humane Society of Pinellas",
-      "url": "https://www.humanesocietyofpinellas.org/"
+      "url": "https://www.humanesocietyofpinellas.org/",
+      "region": "Tampa Bay Area"
     },
     {
       "name": "Humane Society of Tampa Bay",
-      "url": "https://humanesocietytampa.org/"
+      "url": "https://humanesocietytampa.org/",
+      "region": "Tampa Bay Area"
     },
     {
       "name": "Humane Society of the Treasure Coast",
-      "url": "https://hstc1.org/"
+      "url": "https://hstc1.org/",
+      "region": "Southeast Florida & the Keys"
     },
     {
       "name": "Humane Society of Vero Beach & Indian River County",
-      "url": "https://hsvb.org/"
+      "url": "https://hsvb.org/",
+      "region": "Southeast Florida & the Keys"
     },
     {
       "name": "Lee County Domestic Animal Services",
-      "url": "https://www.leegov.com/animalservices"
+      "url": "https://www.leegov.com/animalservices",
+      "region": "Southwest Florida"
     },
     {
       "name": "Leon County Humane Society",
-      "url": "https://www.leoncountyhumane.org/"
+      "url": "https://www.leoncountyhumane.org/",
+      "region": "North Florida"
     },
     {
       "name": "Palm Beach County Animal Care and Control",
-      "url": "https://discover.pbc.gov/publicsafety/animalcare/pages/default.aspx"
+      "url": "https://discover.pbc.gov/publicsafety/animalcare/pages/default.aspx",
+      "region": "Southeast Florida & the Keys"
     },
     {
       "name": "Patty Baker Humane Society Naples",
-      "url": "https://pbhsnaples.org/"
+      "url": "https://pbhsnaples.org/",
+      "region": "Southwest Florida"
     },
     {
       "name": "Seminole County Animal Services",
-      "url": "https://www.seminolecountyfl.gov/departments-services/prepare-seminole/animal-services"
+      "url": "https://www.seminolecountyfl.gov/departments-services/prepare-seminole/animal-services",
+      "region": "Central Florida"
     },
     {
       "name": "SPCA Florida",
-      "url": "https://www.spcaflorida.org/"
+      "url": "https://www.spcaflorida.org/",
+      "region": "Central Florida"
     },
     {
       "name": "SPCA Tampa Bay",
-      "url": "https://spcatampabay.org/"
+      "url": "https://spcatampabay.org/",
+      "region": "Tampa Bay Area"
     },
     {
       "name": "Tallahassee Animal Services",
-      "url": "https://www.talgov.com/animals/animalservices"
+      "url": "https://www.talgov.com/animals/animalservices",
+      "region": "North Florida"
     }
   ]
 }

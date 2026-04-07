@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: Shelters & Services
+description: "Florida shelters, humane societies, SPCAs, and county animal services that may have rabbits available for adoption."
+---
+
+<section class="page-hero">
+  <h1>Shelters, Humane Societies & County Services</h1>
+  <p>{{ directory.shelters_and_services | length }} Florida shelters and government animal services that may have rabbits available.</p>
+</section>
+
+<div class="shelters-intro">
+  <p>The following shelters and government animal services may have rabbits available for adoption. Contact them directly to ask about rabbit availability. For rabbit-focused rescue organizations, see the <a href="/directory/">main directory</a>.</p>
+</div>
+
+<div class="shelters-list">
+  {%- for group in directory.shelters_and_services | groupByRegion %}
+  <div class="region-group">
+    <h2 class="region-heading" id="{{ group.region | slugify }}">{{ group.region }}</h2>
+    <div class="shelter-rows">
+      {%- for shelter in group.shelters %}
+      <a class="shelter-row" href="{{ shelter.url }}" target="_blank" rel="noopener">
+        <span class="shelter-name">{{ shelter.name }}</span>
+        <span class="shelter-arrow">↗</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+
+<div class="shelters-footer">
+  <div class="correction-cta">
+    <p>Is your organization missing or incorrect?</p>
+    <a class="btn-primary" href="/contact/">Submit a Correction &#8594;</a>
+  </div>
+</div>

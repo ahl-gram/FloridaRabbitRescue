@@ -52,6 +52,23 @@ export default function(eleventyConfig) {
     return [...orgs].sort((a, b) => b.years_active - a.years_active);
   });
 
+  eleventyConfig.addFilter("groupByRegion", function(shelters) {
+    const regionOrder = [
+      "North Florida",
+      "Central Florida",
+      "Tampa Bay Area",
+      "Southwest Florida",
+      "Southeast Florida & the Keys"
+    ];
+    const groups = regionOrder.map(region => ({
+      region,
+      shelters: [...shelters]
+        .filter(s => s.region === region)
+        .sort((a, b) => a.name.localeCompare(b.name))
+    }));
+    return groups.filter(g => g.shelters.length > 0);
+  });
+
   return {
     dir: {
       input: "src",

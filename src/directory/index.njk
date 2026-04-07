@@ -152,27 +152,19 @@ description: "All verified Florida rabbit rescue organizations: mission statemen
     {%- endfor %}
   </ul>
 
-  <h2>Other Rabbit-Friendly Organizations</h2>
-  <p class="excluded-intro">The following organizations were reviewed but not included in the main directory, typically because their primary focus extends beyond rabbits. They may still have rabbits available for adoption, and we encourage you to reach out to them directly.</p>
-  <ul>
-    {%- for org in directory.excluded_organizations | sortByName %}
-    <li>
-      <strong>{{ org.name }}</strong>
-      {%- if org.url %} · <a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://", "") }}</a>{% endif %}
-    </li>
-    {%- endfor %}
-  </ul>
-
-  <h2>Shelters, Humane Societies, SPCAs, and County Services</h2>
-  <p class="excluded-intro">The following shelters and government animal services may have rabbits available for adoption. Contact them directly to ask about rabbit availability.</p>
-  <ul>
-    {%- for org in directory.shelters_and_services | sortByName %}
-    <li>
-      <strong>{{ org.name }}</strong>
-      {%- if org.url %} · <a href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://www.", "") | replace("https://", "") }}</a>{% endif %}
-    </li>
-    {%- endfor %}
-  </ul>
+  <div class="directory-see-also">
+    <h2>More Places to Find Rabbits</h2>
+    <div class="see-also-links">
+      <a href="/other-rescues/" class="see-also-card">
+        <strong>Other Rabbit-Friendly Organizations</strong>
+        <span>{{ directory.excluded_organizations | length }} multi-species rescues and sanctuaries that also care for rabbits.</span>
+      </a>
+      <a href="/shelters/" class="see-also-card">
+        <strong>Shelters, Humane Societies & County Services</strong>
+        <span>{{ directory.shelters_and_services | length }} Florida shelters that may have rabbits available for adoption.</span>
+      </a>
+    </div>
+  </div>
 
   <div class="correction-cta">
     <p>Is your organization missing or incorrect?</p>

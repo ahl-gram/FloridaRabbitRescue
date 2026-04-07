@@ -1,0 +1,33 @@
+---
+layout: base.njk
+title: Other Rabbit-Friendly Organizations
+description: "Florida organizations that rescue or care for rabbits alongside other animals."
+---
+
+<section class="page-hero">
+  <h1>Other Rabbit-Friendly Organizations</h1>
+  <p>{{ directory.excluded_organizations | length }} Florida organizations that rescue or care for rabbits alongside other animals.</p>
+</section>
+
+<div class="other-rescues-intro">
+  <p>These organizations were reviewed but not included in the <a href="/directory/">main directory</a>, typically because their primary focus extends beyond rabbits. They may still have rabbits available for adoption, and we encourage you to reach out to them directly.</p>
+</div>
+
+<div class="mini-card-grid">
+  {%- for org in directory.excluded_organizations | sortByName %}
+  <div class="mini-card">
+    <h2 class="mini-card-name" id="{{ org.name | slugify }}">{{ org.name }}</h2>
+    <p class="mini-card-desc">{{ org.reason }}</p>
+    {%- if org.url %}
+    <a class="mini-card-link" href="{{ org.url }}" target="_blank" rel="noopener">{{ org.url | replace("https://www.", "") | replace("https://", "") | replace("/", "") }} ↗</a>
+    {%- endif %}
+  </div>
+  {%- endfor %}
+</div>
+
+<div class="other-rescues-footer">
+  <div class="correction-cta">
+    <p>Is your organization missing or incorrect?</p>
+    <a class="btn-primary" href="/contact/">Submit a Correction &#8594;</a>
+  </div>
+</div>
