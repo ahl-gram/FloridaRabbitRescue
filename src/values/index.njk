@@ -20,28 +20,35 @@ description: The beliefs that unite House Rabbit Society and Rabbit.org Foundati
     {%- for value in directory.shared_values.values %}
     <div class="value-card">
       <div class="value-card-header">
+        <div class="value-card-topline">
+          <span class="value-emoji">{{ value.emoji }}</span>
+          {%- if value.source == "both" %}
+          <span class="value-source-tag tag-both">Both</span>
+          {%- elif value.source == "hrs" %}
+          <span class="value-source-tag tag-hrs">HRS</span>
+          {%- elif value.source == "rorg" %}
+          <span class="value-source-tag tag-rorg">Rabbit.org</span>
+          {%- endif %}
+        </div>
         <h3 class="value-statement" id="{{ value.statement | slugify }}">{{ value.statement }}</h3>
-        {%- if value.source == "both" %}
-        <span class="value-source-tag tag-both">Both</span>
-        {%- elif value.source == "hrs" %}
-        <span class="value-source-tag tag-hrs">HRS</span>
-        {%- elif value.source == "rorg" %}
-        <span class="value-source-tag tag-rorg">Rabbit.org</span>
-        {%- endif %}
       </div>
       <div class="value-quotes">
-        {%- if value.hrs_quote %}
-        <div class="value-quote">
+        <div class="value-quote{% if not value.hrs_quote %} value-quote-empty{% endif %}">
           <span class="value-quote-label">House Rabbit Society</span>
+          {%- if value.hrs_quote %}
           "{{ value.hrs_quote }}"
+          {%- else %}
+          <span class="value-quote-none">No specific language</span>
+          {%- endif %}
         </div>
-        {%- endif %}
-        {%- if value.rorg_quote %}
-        <div class="value-quote">
+        <div class="value-quote{% if not value.rorg_quote %} value-quote-empty{% endif %}">
           <span class="value-quote-label">Rabbit.org Foundation</span>
+          {%- if value.rorg_quote %}
           "{{ value.rorg_quote }}"
+          {%- else %}
+          <span class="value-quote-none">No specific language</span>
+          {%- endif %}
         </div>
-        {%- endif %}
       </div>
     </div>
     {%- endfor %}

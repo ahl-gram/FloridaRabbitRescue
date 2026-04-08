@@ -22,70 +22,82 @@
     },
     "values": [
       {
+        "emoji": "🏠",
         "statement": "Rabbits are intelligent, social animals who thrive indoors as companion animals",
         "source": "both",
         "hrs_quote": "Help people see rabbits as intelligent and social pets that thrive indoors",
         "rorg_quote": "Intelligent and social animals who deserve to be treated with dignity and respect"
       },
       {
+        "emoji": "💛",
         "statement": "Every rabbit has intrinsic worth regardless of breed, temperament, health, or age",
         "source": "both",
         "hrs_quote": "Valuable as individuals, regardless of breed purity, temperament, state of health",
         "rorg_quote": "Intrinsic worth as an individual, regardless of breed purity, temperament, state of health"
       },
       {
+        "emoji": "🤝",
         "statement": "Domestic rabbits are human-dependent; their care is our responsibility",
         "source": "both",
         "hrs_quote": "Product of human interference — human responsibility that these animals be cared for in a manner appropriate to their needs",
         "rorg_quote": "Rely on humans for their well-being, making it our duty"
       },
       {
+        "emoji": "✂️",
         "statement": "Spay/neuter is in the best interest of all domestic rabbits",
         "source": "both",
         "hrs_quote": "In the best interest of domesticated rabbits to be neutered/spayed",
         "rorg_quote": "Neutering or spaying domestic rabbits is in their best interest"
       },
       {
+        "emoji": "🩺",
         "statement": "Regular veterinary care is essential for domestic rabbits",
         "source": "both",
         "hrs_quote": "Treated for illnesses by veterinarians",
         "rorg_quote": "Regular veterinary treatment and care are essential for the overall health and happiness"
       },
       {
+        "emoji": "⚖️",
         "statement": "Rabbits deserve the same rights, care, and opportunity for longevity as dogs and cats",
         "source": "both",
         "hrs_quote": "Same individual rights, level of care, and opportunity for longevity as dogs and cats",
         "rorg_quote": "Same language used verbatim"
       },
       {
+        "emoji": "🧩",
         "statement": "Rabbits require mental stimulation, exercise, enrichment, and social interaction",
         "source": "both",
         "hrs_quote": "Mental stimulation, toys, exercise, environmental activity, and social interaction",
         "rorg_quote": "Important role of mental stimulation, playtime, exercise, environmental activity, and social interaction"
       },
       {
+        "emoji": "🛡️",
         "statement": "The welfare of all rabbits is the primary concern; exploitation in all forms is opposed",
         "source": "both",
         "hrs_quote": "Welfare of all rabbits is our primary consideration. We are against the exploitation of rabbits in any and all forms",
         "rorg_quote": "Against the exploitation of rabbits in any and all forms unless it directly benefits the rabbits under the guidance of a rabbit rescue"
       },
       {
+        "emoji": "📚",
         "statement": "Public education about rabbit care is core to the mission",
         "source": "both",
         "hrs_quote": "Change cultural perceptions of domesticated rabbits and improve their quality of care and living standards",
         "rorg_quote": "Dedicated to working toward a future where all domestic rabbits are given the care and attention they deserve"
       },
       {
+        "emoji": "💚",
         "statement": "Positive reinforcement only; fear-based and punishment-based methods must be avoided",
         "source": "rorg",
         "rorg_quote": "Encourage the use of positive reinforcement techniques — imperative to discourage and avoid fear-based and punishment-based behavior-modification techniques"
       },
       {
+        "emoji": "🚫",
         "statement": "No support for or alignment with groups that promote rabbits as food animals",
         "source": "hrs",
         "hrs_quote": "We do not support or align ourself with any group or individual promoting rabbits as food animals"
       },
       {
+        "emoji": "🌿",
         "statement": "Wild rabbit populations benefit most from minimal human intervention, except in rehabilitation situations",
         "source": "both",
         "hrs_quote": "In the best interest of wild rabbits that human intervention be held to a minimum",
@@ -718,8 +730,8 @@
       "founded_source": "Sunbiz filing date 06/30/2015; IRS ruling year 2016",
       "board": {
         "status": "not_reviewed",
-        "status_label": "Not yet reviewed",
-        "notes": "Sunbiz principals not yet reviewed"
+        "status_label": "3 principals on Sunbiz",
+        "notes": "3 principals on Sunbiz"
       },
       "contact": {
         "email": "thecarrotpatchrescue@gmail.com",
@@ -760,8 +772,8 @@
       "founded_source": "Sunbiz filing date 12/10/2004; IRS tax-exempt since November 2006",
       "board": {
         "status": "not_reviewed",
-        "status_label": "Not yet reviewed",
-        "notes": "Sunbiz principals not yet reviewed"
+        "status_label": "2 principals on Sunbiz",
+        "notes": "2 principals on Sunbiz"
       },
       "contact": {
         "email": "dana@miami.edu",

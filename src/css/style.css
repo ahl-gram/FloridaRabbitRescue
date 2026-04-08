@@ -1011,19 +1011,26 @@ a:hover { color: var(--green-700); text-decoration: underline; }
 }
 .value-card-header {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
-.value-statement {
+.value-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.value-emoji {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+h3.value-statement {
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.4;
-  flex: 1;
-  margin: 0;
+  margin: 0.75rem 0;
 }
 .value-source-tag {
   font-size: 0.65rem;
@@ -1054,6 +1061,12 @@ a:hover { color: var(--green-700); text-decoration: underline; }
   background: var(--surface-subtle);
   border-radius: var(--radius-sm);
 }
+.value-quote-empty {
+  opacity: 0.5;
+}
+.value-quote-none {
+  font-style: italic;
+}
 .value-quote-label {
   font-size: 0.62rem;
   font-weight: 500;
@@ -1068,10 +1081,6 @@ a:hover { color: var(--green-700); text-decoration: underline; }
 @media (max-width: 600px) {
   .value-quotes {
     grid-template-columns: 1fr;
-  }
-  .value-card-header {
-    flex-direction: column;
-    gap: 0.5rem;
   }
 }
 
