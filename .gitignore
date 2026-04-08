@@ -1,7 +1,7 @@
 node_modules/
 _site/
+.claude/
 .DS_Store
 planning/
-outreach-*.txt
 SESSION-NOTES.md
 RESUME-HERE.md
