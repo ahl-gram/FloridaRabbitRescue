@@ -2,11 +2,13 @@
 layout: base.njk
 title: About
 description: Who maintains the Florida Rabbit Rescue Directory, how organizations are verified, and why this site exists.
+value_index: 8
 ---
 
 <section class="page-hero">
   <h1>About This Directory</h1>
   <p>Who we are, how we verify, and why this exists.</p>
+  {% set v = directory.shared_values.values[value_index] %}<p class="hero-epigraph"><a href="/values/#{{ v.statement | slugify }}">{{ v.statement }}</a></p>
 </section>
 
 <div class="prose">

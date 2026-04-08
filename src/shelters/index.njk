@@ -2,11 +2,13 @@
 layout: base.njk
 title: Shelters & Services
 description: "Florida shelters, humane societies, SPCAs, and county animal services that may have rabbits available for adoption."
+value_index: 5
 ---
 
 <section class="page-hero">
   <h1>Shelters, Humane Societies & County Services</h1>
   <p>{{ directory.shelters_and_services | length }} Florida shelters and government animal services that may have rabbits available.</p>
+  {% set v = directory.shared_values.values[value_index] %}<p class="hero-epigraph"><a href="/values/#{{ v.statement | slugify }}">{{ v.statement }}</a></p>
 </section>
 
 <div class="shelters-intro">

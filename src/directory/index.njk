@@ -2,11 +2,13 @@
 layout: base.njk
 title: Directory
 description: "All verified Florida rabbit rescue organizations: mission statements, 501(c)(3) status, founding dates, and board transparency."
+value_index: 1
 ---
 
 <section class="directory-hero">
   <h1>Florida Rabbit Rescue Directory</h1>
   <p>{{ directory.organizations | length }} rabbit rescue organizations in Florida.</p>
+  {% set v = directory.shared_values.values[value_index] %}<p class="hero-epigraph"><a href="/values/#{{ v.statement | slugify }}">{{ v.statement }}</a></p>
 </section>
 
 <div class="directory-intro">

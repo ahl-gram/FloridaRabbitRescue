@@ -2,6 +2,7 @@
 layout: base.njk
 title: Home
 description: A free, independently verified directory of Florida rabbit rescue organizations, and the values that guide responsible rabbit ownership.
+value_index: 0
 ---
 
 <section class="hero">
@@ -13,6 +14,7 @@ description: A free, independently verified directory of Florida rabbit rescue o
         <a class="btn-primary" href="/directory/">Find a Rescue →</a>
         <a class="btn-outline" href="/before-you-adopt/">Before You Adopt</a>
       </div>
+      {% set v = directory.shared_values.values[value_index] %}<p class="hero-epigraph"><a href="/values/#{{ v.statement | slugify }}">{{ v.statement }}</a></p>
     </div>
     <div class="hero-image">
       <img class="hero-rabbit" src="/images/ollie-churro-peanut.png" alt="Three rabbits — an English Spot, a brown Holland Lop, and a white and tan Dutch Harlequin mix" width="700" height="393" loading="eager">

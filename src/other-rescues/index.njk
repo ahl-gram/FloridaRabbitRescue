@@ -2,11 +2,13 @@
 layout: base.njk
 title: Other Rabbit-Friendly Organizations
 description: "Florida organizations that rescue or care for rabbits alongside other animals."
+value_index: 2
 ---
 
 <section class="page-hero">
   <h1>Other Rabbit-Friendly Organizations</h1>
   <p>{{ directory.excluded_organizations | length }} Florida organizations that rescue or care for rabbits alongside other animals.</p>
+  {% set v = directory.shared_values.values[value_index] %}<p class="hero-epigraph"><a href="/values/#{{ v.statement | slugify }}">{{ v.statement }}</a></p>
 </section>
 
 <div class="other-rescues-intro">

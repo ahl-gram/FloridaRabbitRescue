@@ -2,11 +2,13 @@
 layout: base.njk
 title: Before You Adopt
 description: "What you need to know before bringing a rabbit home: honest guidance on commitment, cost, care, and common misconceptions."
+value_index: 6
 ---
 
 <section class="page-hero">
   <h1>Before You Adopt</h1>
   <p>Rabbits make wonderful companions, but they're not the low-maintenance pet many people expect. Here's what you need to know.</p>
+  {% set v = directory.shared_values.values[value_index] %}<p class="hero-epigraph"><a href="/values/#{{ v.statement | slugify }}">{{ v.statement }}</a></p>
 </section>
 
 <div class="prose">
