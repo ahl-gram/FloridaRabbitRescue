@@ -5,6 +5,73 @@ description: "All verified Florida rabbit rescue organizations: mission statemen
 value_index: 1
 ---
 
+{%- set orgsSorted = directory.organizations | sortByName %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Florida Rabbit Rescue Organizations",
+  "description": "Verified Florida rabbit rescue organizations.",
+  "numberOfItems": {{ orgsSorted | length }},
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "itemListElement": [
+    {%- for org in orgsSorted %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "AnimalShelter",
+        "@id": {{ (site.url + "/directory/#" + org.id) | dump | safe }},
+        "name": {{ org.name | dump | safe }},
+        {%- if org.short_name %}
+        "alternateName": {{ org.short_name | dump | safe }},
+        {%- endif %}
+        {%- if org.website %}
+        "url": {{ org.website | dump | safe }},
+        {%- elif org.linktree_url %}
+        "url": {{ org.linktree_url | dump | safe }},
+        {%- elif org.social and org.social.facebook %}
+        "url": {{ org.social.facebook | dump | safe }},
+        {%- endif %}
+        {%- if org.mission_statement %}
+        "description": {{ org.mission_statement | dump | safe }},
+        {%- endif %}
+        {%- if org.contact and org.contact.email %}
+        "email": {{ org.contact.email | dump | safe }},
+        {%- endif %}
+        {%- if org.contact and org.contact.phone %}
+        "telephone": {{ org.contact.phone | dump | safe }},
+        {%- endif %}
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": {{ org.location.city | dump | safe }},
+          "addressRegion": {{ org.location.state | dump | safe }},
+          "addressCountry": "US"
+        },
+        "areaServed": {{ org.service_area | dump | safe }},
+        {%- if org.founded %}
+        "foundingDate": "{{ org.founded }}",
+        {%- endif %}
+        {%- if org.nonprofit and (org.nonprofit.status == "confirmed" or org.nonprofit.status == "confirmed_via_guidestar") %}
+        "nonprofitStatus": "Nonprofit501c3",
+        {%- endif %}
+        {%- if org.nonprofit and org.nonprofit.ein %}
+        "taxID": {{ org.nonprofit.ein | dump | safe }},
+        {%- endif %}
+        {%- set sameAs = [] %}
+        {%- if org.social and org.social.facebook %}{%- set sameAs = (sameAs.push(org.social.facebook), sameAs) %}{%- endif %}
+        {%- if org.social and org.social.instagram %}{%- set sameAs = (sameAs.push(org.social.instagram), sameAs) %}{%- endif %}
+        {%- if org.social and org.social.tiktok %}{%- set sameAs = (sameAs.push(org.social.tiktok), sameAs) %}{%- endif %}
+        {%- if org.petfinder_url %}{%- set sameAs = (sameAs.push(org.petfinder_url), sameAs) %}{%- endif %}
+        {%- if org.nonprofit and org.nonprofit.candid_url %}{%- set sameAs = (sameAs.push(org.nonprofit.candid_url), sameAs) %}{%- endif %}
+        "sameAs": {{ sameAs | dump | safe }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+
 <section class="directory-hero">
   <h1>Florida Rabbit Rescue Directory</h1>
   <p>{{ directory.organizations | length }} rabbit rescue organizations in Florida.</p>
