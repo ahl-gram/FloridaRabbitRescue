@@ -5,3 +5,4 @@ _site/
 planning/
 SESSION-NOTES.md
 RESUME-HERE.md
+__pycache__/
