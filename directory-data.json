@@ -107,10 +107,16 @@
   },
   "closed_organizations": [
     {
-      "name": "Suncoast House Rabbit Rescue",
-      "reason": "Officially closed October 2025",
-      "url": "https://suncoasthrr.org",
-      "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=SUNCOASTHOUSERABBITRESCUE%20N190000009730&aggregateId=domnp-n19000000973-e4e62ff0-adb8-4e84-abb8-0289d757e8a1&searchTerm=suncoast%20house%20rabbit&listNameOrder=SUNCOASTHOUSERABBITRESCUE%20N190000009730",
+      "name": "Fort Wilbur Rabbit Resources",
+      "reason": "Voluntarily dissolved with the Florida Division of Corporations on April 12, 2026. Formerly known as Fort Wilbur Rabbit Rescue. Website and social media accounts may still be online.",
+      "url": "https://avwahc.wixsite.com/fwrr",
+      "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=FORTWILBURRABBITRESOURCES%20N190000072491&aggregateId=domnp-n19000007249-5f297fa2-1385-4d6a-9efb-a4417a73c9be&searchTerm=fort%20wilbur&listNameOrder=FORTWILBURRABBITRESCUE%20N190000072490",
+      "show_in_ui": true
+    },
+    {
+      "name": "Happy Bunny Rescue",
+      "reason": "Sunbiz filing inactive, admin dissolution September 2024. No website or social media presence found.",
+      "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=HAPPYBUNNYRESCUE%20N230000143740&aggregateId=domnp-n23000014374-a17a70c3-a6b3-49db-88c7-c3e6ea6865a8&searchTerm=Happy%20Bunny%20Rescue&listNameOrder=HAPPYBUNNYRESCUE%20L230002055680",
       "show_in_ui": true
     },
     {
@@ -119,9 +125,10 @@
       "show_in_ui": false
     },
     {
-      "name": "Happy Bunny Rescue",
-      "reason": "Sunbiz filing inactive, admin dissolution September 2024. No website or social media presence found.",
-      "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=HAPPYBUNNYRESCUE%20N230000143740&aggregateId=domnp-n23000014374-a17a70c3-a6b3-49db-88c7-c3e6ea6865a8&searchTerm=Happy%20Bunny%20Rescue&listNameOrder=HAPPYBUNNYRESCUE%20L230002055680",
+      "name": "Suncoast House Rabbit Rescue",
+      "reason": "Officially closed October 2025",
+      "url": "https://suncoasthrr.org",
+      "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=SUNCOASTHOUSERABBITRESCUE%20N190000009730&aggregateId=domnp-n19000000973-e4e62ff0-adb8-4e84-abb8-0289d757e8a1&searchTerm=suncoast%20house%20rabbit&listNameOrder=SUNCOASTHOUSERABBITRESCUE%20N190000009730",
       "show_in_ui": true
     }
   ],
@@ -648,56 +655,6 @@
       "species_focus": "rabbits_and_guinea_pigs",
       "model": "foster_only",
       "directory_note": "Newest organization in the directory. 501(c)(3) confirmed via IRS determination letter (11/19/2024). Listed as of March 2026 with the caveat that this org has under one year of operation — outreach and annual re-verification recommended.",
-      "last_verified": "2026-03"
-    },
-    {
-      "id": "fwrr",
-      "name": "Fort Wilbur Rabbit Resources",
-      "short_name": "Fort Wilbur",
-      "location": {
-        "city": "Ormond Beach",
-        "state": "FL",
-        "region": "Northeast Florida / Volusia County"
-      },
-      "service_area": "Volusia, Flagler, and Lake Counties · Statewide via foster network",
-      "website": "https://avwahc.wixsite.com/fwrr",
-      "website_note": "Primary Wix site; fortwilbur.org may have intermittent issues",
-      "social": {
-        "facebook": "https://www.facebook.com/fortwilburbuns/",
-        "instagram": "https://www.instagram.com/fortwilburbunnies/"
-      },
-      "mission_statement": "A 501(c)(3) nonprofit dedicated to rehabilitating and rehoming critically neglected and abused rabbits, with a broader mission of rabbit rehabilitation, therapy, and education. The only rabbit rescue in the United States that offers all of its programs free of charge, including grooming, health evaluations, workshops, one-on-one training, a 24-hour phone line, and disaster relief.",
-      "mission_source": "avwahc.wixsite.com/fwrr",
-      "nonprofit": {
-        "status": "confirmed",
-        "status_label": "Confirmed 501(c)(3)",
-        "ein": "84-2423216",
-        "candid_url": "https://app.candid.org/profile/9894273/fort-wilbur-rabbit-rescue-inc-84-2423216",
-        "ein_note": null,
-        "guidestar_note": "990-N filer (under $50k revenue)",
-        "sunbiz_document_number": "N19000007249",
-        "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=FORTWILBURRABBITRESOURCES%20N190000072491&aggregateId=domnp-n19000007249-5f297fa2-1385-4d6a-9efb-a4417a73c9be&searchTerm=fort%20wilbur&listNameOrder=FORTWILBURRABBITRESCUE%20N190000072490",
-        "sunbiz_note": null
-      },
-      "founded": 2011,
-      "founded_formal": 2019,
-      "founded_source": "Started informally in 2011; incorporated as FL nonprofit July 2019; IRS 501(c)(3) effective September 2022",
-      "board": {
-        "status": "sunbiz_principals",
-        "status_label": "3 principals on FL Sunbiz records",
-        "sunbiz_principals_count": 3,
-        "notes": "CEO: Vanessa A. Chaves (founder), COO: Desiree Razon, CFO/Secretary: Adam W. Hill. ~12 consistent volunteers. Annual report filed April 2025."
-      },
-      "contact": {
-        "email": "fortwilburbuns@yahoo.com",
-        "phone": null
-      },
-      "species_focus": "rabbits_only",
-      "model": "foster_and_rehabilitation",
-      "caveats": [
-        "Only accepts rabbits from other 501(c)(3) rescues and state shelters — does not take surrenders from the general public",
-        "Formerly known as Fort Wilbur Rabbit Rescue — renamed to Fort Wilbur Rabbit Resources in January 2024"
-      ],
       "last_verified": "2026-03"
     },
     {
