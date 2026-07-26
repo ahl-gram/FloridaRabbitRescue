@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Florida Rabbit Rescue Directory",
-    "last_verified": "2026-04",
+    "last_verified": "2026-07",
     "verifier_notes": "All data sourced from publicly available websites, GuideStar, Charity Navigator, Florida Division of Corporations (Sunbiz), and IRS Business Master File. Mission statements are verbatim or as close to verbatim as publicly available. Founding years sourced from FL corporate records, organization websites, or IRS ruling year where available."
   },
   "shared_values": {
@@ -237,7 +237,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_and_facility",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "orca",
@@ -283,7 +283,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "tbhrr",
@@ -328,7 +328,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "swfl",
@@ -373,7 +373,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "ecrr",
@@ -420,7 +420,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "pandw",
@@ -465,7 +465,7 @@
       "species_note": "Also rescues guinea pigs in addition to rabbits",
       "species_focus": "rabbits_and_guinea_pigs",
       "model": "foster_only",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "scb",
@@ -512,7 +512,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "bebette",
@@ -558,7 +558,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "holly",
@@ -602,7 +602,7 @@
       "species_note": "Rescue is rabbit-focused; website includes guinea pig education as a secondary interest",
       "species_focus": "rabbits_primary",
       "model": "foster_only",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "seflrr",
@@ -655,7 +655,7 @@
       "species_focus": "rabbits_and_guinea_pigs",
       "model": "foster_only",
       "directory_note": "Newest organization in the directory. 501(c)(3) confirmed via IRS determination letter (11/19/2024). Listed as of March 2026 with the caveat that this org has under one year of operation — outreach and annual re-verification recommended.",
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "mcprr",
@@ -697,7 +697,7 @@
       "species_focus": "rabbits_and_small_animals",
       "model": "sanctuary",
       "caveats": [],
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "hare",
@@ -728,9 +728,10 @@
       "founded": 2004,
       "founded_source": "Sunbiz filing date 12/10/2004; IRS tax-exempt since November 2006",
       "board": {
-        "status": "not_reviewed",
-        "status_label": "2 principals on Sunbiz",
-        "notes": "2 principals on Sunbiz"
+        "status": "sunbiz_principals",
+        "status_label": "2 principals on FL Sunbiz records",
+        "sunbiz_principals_count": 2,
+        "notes": "Dana Krempels (Executive Director, H.A.R.E. founder) and Kevin Johnson (Director). Individual names not published on the organization's own website."
       },
       "contact": {
         "email": "dana@miami.edu",
@@ -741,9 +742,10 @@
       "model": "foster_and_sanctuary",
       "caveats": [
         "Affiliated with the University of Miami",
-        "Current activity level not yet confirmed"
+        "Website is hosted on University of Miami pages and has not been substantially updated in years, so it is not a reliable guide to current activity. The organization itself is current: FL nonprofit registration active with a 2026 annual report filed, IRS exempt status in good standing, and an active Facebook presence.",
+        "Adoption listings are directed to general Adoptapet and Petfinder searches rather than an organization-specific page. Contact them directly to ask about rabbit availability."
       ],
-      "last_verified": "2026-03"
+      "last_verified": "2026-07"
     },
     {
       "id": "brs",
@@ -789,7 +791,7 @@
         "No Florida corporate filing or 501(c)(3) status on record",
         "Currently on hiatus — not accepting new surrenders. Still active as a rabbit education and referral resource, connecting those looking to surrender or adopt with other local rescues."
       ],
-      "last_verified": "2026-04"
+      "last_verified": "2026-07"
     },
     {
       "id": "rebas",
