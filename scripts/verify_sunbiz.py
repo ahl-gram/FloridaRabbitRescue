@@ -21,21 +21,68 @@ GETTING THE DATA (public, no account or API key)
     https://dos.fl.gov/sunbiz/other-services/data-downloads/ - the equivalent of an
     anonymous FTP login. It grants read-only access to already-public bulk records.
 
+    You must run this download by hand, in a real terminal. It cannot be scripted here:
+    macOS system curl is built without SFTP support (check with `curl -V`), and only the
+    interactive sftp client is available, which needs a TTY for the password prompt. If you
+    are working with an AI assistant, expect it to be unable to do this step for you.
+
     sftp Public@sftp.floridados.gov          password: PubAccess1845!
     sftp> cd doc/quarterly/cor
-    sftp> lcd planning/sunbiz
+    sftp> lcd /absolute/path/to/repo/planning/sunbiz
     sftp> get cordata.zip                    1.82 GB, corporate filings + status
     sftp> get corevent.zip                   189 MB, the events explaining WHY inactive
-    Regenerated each January, April, July, and October.
+    sftp> bye
+
+    Use an ABSOLUTE path for lcd. It resolves against the directory you launched sftp from,
+    so a relative path silently deposits the files somewhere unexpected.
+
+    Verify the transfer completed by comparing byte sizes against the `ls -l` output on the
+    server. A truncated zip fails late and confusingly.
+
+    Regenerated each January, April, July, and October. Check the server-side file date: if
+    it predates the current quarter you are reading stale registry data, and should say so
+    rather than let the output look current.
 
     Do NOT unzip these. Uncompressed they are about 18.5 GB. This script streams them,
     and a full scan of all 12.8 million records takes roughly 20 seconds.
+
+    Note the docs describe the corporate data as "broken into 10 smaller files" in a way
+    that reads as if they are separate downloads. They are not. There is one cordata.zip,
+    and the ten files (cordata0.txt .. cordata9.txt) are inside it, partitioned by the LAST
+    DIGIT of the document number. corevent.zip holds a single corevt.txt.
 
 RECORD LAYOUT
     Verified against real records. The official field definitions are 1-indexed, so every
     documented "start" position is one greater than the Python slice index used here.
     cordata: 1442 bytes per record = 1440 payload + CRLF
     corevt : 664 bytes per record = 662 payload + CRLF
+    Full field table, including the ones this script does not read, is in
+    planning/verification-2026-07.md.
+
+WHEN ADDING A NEW ORGANIZATION: the trailing-digit trap
+    Sunbiz's own result URLs append a sequence digit to the document number, so the URL for
+    N04000003455 contains N040000034550 (13 characters). A real document number is 12
+    characters: N plus 11 digits. Copying from the URL silently produces an unmatchable
+    value, and these render publicly on /directory/ as linked "Sunbiz:" text. Three listings
+    shipped with this error. Take the first 12 characters, and confirm the number matches a
+    registry record before trusting it.
+
+IF YOU CHANGE THE PARSING, RE-VALIDATE FIRST
+    Fixed-width offset math fails silently: a one-byte shift yields plausible garbage rather
+    than an exception, so a clean-looking run proves nothing. Before trusting any change,
+    read back a record whose answer is known independently. Two that work today:
+      - N04000011513 (H.A.R.E.) must report file date 12102004. That date came from separate
+        research recorded in its founded_source, so it is a genuine external check.
+      - N23000014374 (Happy Bunny Rescue) must report status I with last transaction
+        09272024, matching the closure our data already documents.
+    A verification tool reporting "nothing found" is indistinguishable from a broken one.
+
+WHAT THIS DOES NOT TELL YOU
+    Registry status is about the legal entity, not the rescue. An organization can keep
+    taking rabbits after dissolving its corporation, and can stay registered long after it
+    stops operating. Status I is grounds to make contact, never grounds to silently
+    reclassify a listing. Both real findings here were confirmed with a human before the
+    site changed.
 """
 
 import json
