@@ -33,17 +33,26 @@ of Pinellas returned 200 for four months after it merged out of existence. What 
 caught it is the cross-domain redirect check, so treat that section of the output as the
 highest-signal part of a run.
 
-Known urllib false positives, all confirmed serving fine via curl (do not chase these):
-  - hare.as.miami.edu          -> ERR:URLError, TLS handshake (UNEXPECTED_EOF)
-  - humanesocietytampabay.org  -> 500
-  - fkspca.org                 -> 403
-  - any facebook.com URL       -> 400
-Confirm any non-200 with `curl -sIL <url>` before treating it as a real finding.
+FETCHING: urllib first, curl as a fallback
+    Some hosts reject urllib while serving curl perfectly. hare.as.miami.edu fails the TLS
+    handshake with UNEXPECTED_EOF, fkspca.org answers 403, humanesocietytampabay.org times
+    out. Left unhandled, those sites are permanent blind spots: their page content is never
+    read, and "could not fetch" looks the same in a summary as "fetched and found nothing".
+    So fetch() retries through curl whenever urllib does not return 200, and every result
+    records `fetched_via` so a run can distinguish scanned from unreadable.
+
+    Facebook and Instagram fail both ways (400/403) and are genuinely unreadable. Those show
+    up as `both-failed`, which is the honest answer rather than a silent pass.
+
+    The fallback costs one extra request only on failure; a normal 200 never invokes curl.
+    If curl is missing entirely the fallback records ERR:CurlUnavailable and carries on.
 """
 
 import json
 import os
 import re
+import shutil
+import subprocess
 import time
 import urllib.error
 import urllib.parse
@@ -51,6 +60,10 @@ import urllib.request
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+# Resolved once. None means no curl on this machine, in which case the fallback
+# degrades to a recorded ERR rather than a crash.
+CURL = shutil.which("curl")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, os.pardir))
@@ -81,13 +94,8 @@ STOPWORDS = {"inc", "incorporated", "of", "the", "a", "and", "&", "llc",
              "corp", "corporation", "co", "foundation", "fl", "florida"}
 
 
-def fetch(url, timeout=25):
-    """Return (status, body_text, final_url). status is an int, or 'ERR:Type'.
-
-    Note: some hosts (hare.as.miami.edu) fail urllib's TLS handshake with
-    UNEXPECTED_EOF while serving curl fine. An ERR: result means "no signal",
-    not "site is down" -- confirm with curl before concluding anything.
-    """
+def fetch_urllib(url, timeout=25):
+    """Return (status, body_text, final_url). status is an int, or 'ERR:Type'."""
     req = urllib.request.Request(url, headers={
         "User-Agent": UA,
         "Accept": "text/html,application/xhtml+xml,application/json,*/*",
@@ -105,6 +113,54 @@ def fetch(url, timeout=25):
         return e.code, "", (getattr(e, "url", None) or url)
     except Exception as e:
         return f"ERR:{type(e).__name__}", "", url
+
+
+def fetch_curl(url, timeout=30):
+    """Fallback fetch via the curl binary.
+
+    Several hosts reject urllib while serving curl perfectly: hare.as.miami.edu
+    fails the TLS handshake with UNEXPECTED_EOF, fkspca.org answers 403, and
+    humanesocietytampabay.org times out. Without this fallback those sites are
+    permanent blind spots whose page content never gets read, which is worse than
+    it looks: a "no signal" result is indistinguishable from a clean one.
+    """
+    if CURL is None:
+        return "ERR:CurlUnavailable", "", url
+    try:
+        proc = subprocess.run(
+            [CURL, "-sL", "-m", str(timeout), "-A", UA,
+             "-w", "\n%{http_code}\t%{url_effective}", url],
+            capture_output=True, timeout=timeout + 10, check=False)
+    except (subprocess.TimeoutExpired, OSError) as e:
+        return f"ERR:{type(e).__name__}", "", url
+
+    out = proc.stdout.decode("latin-1", errors="replace")
+    body, _, trailer = out.rpartition("\n")
+    code_text, _, final_url = trailer.partition("\t")
+    if not code_text.isdigit():
+        return "ERR:CurlUnparseable", "", url
+    code = int(code_text)
+    return code, (body if code == 200 else ""), (final_url or url)
+
+
+def fetch(url, timeout=25):
+    """Fetch via urllib, falling back to curl when that does not yield a 200.
+
+    Returns (status, body_text, final_url, via) where `via` records which
+    fetcher produced the result, so the output can distinguish "scanned" from
+    "could not be read by either method".
+    """
+    status, body, final_url = fetch_urllib(url, timeout)
+    if status == 200:
+        return status, body, final_url, "urllib"
+
+    c_status, c_body, c_final = fetch_curl(url, timeout + 5)
+    if c_status == 200:
+        return c_status, c_body, c_final, "curl"
+
+    # Neither worked. Prefer urllib's view, since its redirect chain is the one
+    # the merger detector reads, but report that the fallback was tried too.
+    return status, body, final_url, f"both-failed (curl: {c_status})"
 
 
 def host_of(url):
@@ -161,8 +217,8 @@ def ceased_signals(body):
 def check_irs(ein):
     if not ein:
         return {"checked": False, "reason": "no EIN on record"}
-    status, body, _ = fetch("https://projects.propublica.org/nonprofits/api/v2"
-                            f"/organizations/{re.sub(r'[^0-9]', '', ein)}.json")
+    status, body, _, _ = fetch("https://projects.propublica.org/nonprofits/api/v2"
+                               f"/organizations/{re.sub(r'[^0-9]', '', ein)}.json")
     if status != 200:
         return {"checked": False, "reason": f"API returned {status}"}
     try:
@@ -182,8 +238,9 @@ def check_irs(ein):
 def check_site(url):
     if not url:
         return {"checked": False, "reason": "no website on record"}
-    status, body, final_url = fetch(url)
-    out = {"checked": True, "status": status, "final_url": final_url}
+    status, body, final_url, via = fetch(url)
+    out = {"checked": True, "status": status, "final_url": final_url,
+           "fetched_via": via}
     note = redirect_note(url, final_url)
     if note:
         out["redirect_note"] = note
