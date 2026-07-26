@@ -19,7 +19,12 @@ Automatable signals:
 
 NOT automatable, must be done in a browser or left flagged:
   - Sunbiz corporate status  -> Cloudflare JS challenge, no scripted access at any UA
-  - Petfinder membership     -> 403 to scripts; a quit org 403s identically to an active one
+  - Petfinder membership     -> 403 to scripts; a quit org 403s identically to an active one.
+                                There is no API alternative: Petfinder decommissioned its public
+                                API on 2025-12-02 and api.petfinder.com no longer resolves. Its
+                                replacement is a display-only widget. Adopt-a-Pet and Shelterluv
+                                both have live APIs but scope keys to the organization's own data,
+                                so neither is usable by a third-party directory.
   - Facebook / Instagram     -> uniform 400/403 bot-blocking, zero signal, not worth the requests
   - founded year, board      -> no machine-checkable source
 
