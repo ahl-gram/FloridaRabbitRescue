@@ -790,6 +790,59 @@
         "Currently on hiatus — not accepting new surrenders. Still active as a rabbit education and referral resource, connecting those looking to surrender or adopt with other local rescues."
       ],
       "last_verified": "2026-04"
+    },
+    {
+      "id": "rebas",
+      "name": "Reba's Rabbit Rescue",
+      "short_name": "Reba's",
+      "location": {
+        "city": "Tarpon Springs",
+        "state": "FL",
+        "region": "West Central Florida"
+      },
+      "service_area": "Pinellas County · Tampa Bay area via foster and transport network",
+      "website": "https://rebasrabbitrescue.com",
+      "petfinder_url": null,
+      "social": {
+        "facebook": "https://www.facebook.com/share/1Bn5PieZ64/",
+        "instagram": "https://www.instagram.com/rebasrabbitrescue/"
+      },
+      "mission_statement": "Reba's Rabbit Rescue is a 501(c)(3) nonprofit located in Pinellas County, Florida. We are dedicated to rescuing rabbits, educating the community about proper rabbit care, and providing safe, loving homes for rabbits in need.",
+      "mission_source": "rebasrabbitrescue.com/about",
+      "nonprofit": {
+        "status": "confirmed",
+        "status_label": "Confirmed 501(c)(3)",
+        "ein": "41-3172548",
+        "candid_url": "https://app.candid.org/profile/16522600/rebas-rabbit-rescue-41-3172548",
+        "sunbiz_document_number": "N25000016116",
+        "sunbiz_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=REBASRABBITRESCUE%20N250000161160&aggregateId=domnp-n25000016116-f59cfed9-a660-4e81-8a5f-609ff61d7024&searchTerm=Rebas%20Rabbit%20Rescue&listNameOrder=REBASRABBITRESCUE%20N250000161160",
+        "sunbiz_date_filed": "2025-12-16",
+        "sunbiz_status": "ACTIVE",
+        "irs_ruling_month": "2026-01",
+        "guidestar_note": "Candid profile exists. Too new to have filed a 990 or 990-N yet; no filing data in the IRS Business Master File as of July 2026."
+      },
+      "founded": 2025,
+      "founded_month": "December",
+      "founded_source": "FL Sunbiz filing date 12/16/2025. IRS 501(c)(3) ruling month January 2026 per IRS Business Master File.",
+      "board": {
+        "status": "sunbiz_principals",
+        "status_label": "3 directors on FL Sunbiz records",
+        "sunbiz_principals_count": 3,
+        "notes": "Directors: Rachel Hardwick, Thurman Hamilton, Akai DiBattista. All three listed at the organization's Tarpon Springs address. No board page on the website."
+      },
+      "contact": {
+        "email": null,
+        "phone": null,
+        "contact_note": "No email or phone published. Website uses web forms for contact, adoption applications, rehome requests, and boarding."
+      },
+      "species_focus": "rabbits_only",
+      "model": "foster_and_sanctuary",
+      "caveats": [
+        "Also offers paid rabbit boarding as a secondary service alongside rescue and adoption",
+        "Maintains permanent sanctuary residents, including rabbits with medical needs, that are not available for adoption"
+      ],
+      "directory_note": "Newest organization in the directory. FL nonprofit filed 12/16/2025 and active in the state registry; 501(c)(3) confirmed in the IRS Business Master File with a January 2026 ruling month. Listed as of July 2026 with the caveat that this org has under one year of operation — annual re-verification recommended.",
+      "last_verified": "2026-07"
     }
   ],
   "organizations_watching": [],
