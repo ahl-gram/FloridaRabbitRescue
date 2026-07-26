@@ -62,7 +62,7 @@ value_index: 1
         {%- if org.social and org.social.facebook %}{%- set sameAs = (sameAs.push(org.social.facebook), sameAs) %}{%- endif %}
         {%- if org.social and org.social.instagram %}{%- set sameAs = (sameAs.push(org.social.instagram), sameAs) %}{%- endif %}
         {%- if org.social and org.social.tiktok %}{%- set sameAs = (sameAs.push(org.social.tiktok), sameAs) %}{%- endif %}
-        {%- if org.petfinder_url %}{%- set sameAs = (sameAs.push(org.petfinder_url), sameAs) %}{%- endif %}
+        {%- if org.adoption_listing_url %}{%- set sameAs = (sameAs.push(org.adoption_listing_url), sameAs) %}{%- endif %}
         {%- if org.nonprofit and org.nonprofit.candid_url %}{%- set sameAs = (sameAs.push(org.nonprofit.candid_url), sameAs) %}{%- endif %}
         "sameAs": {{ sameAs | dump | safe }}
       }

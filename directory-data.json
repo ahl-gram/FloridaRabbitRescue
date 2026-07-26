@@ -206,7 +206,7 @@
       },
       "service_area": "North Central Florida · May assist statewide via foster network",
       "website": "https://www.gainesvillerabbitrescue.org",
-      "petfinder_url": "https://www.petfinder.com/member/us/fl/williston/gainesville-rabbit-rescue-fl110/",
+      "adoption_listing_url": "https://www.petfinder.com/member/us/fl/williston/gainesville-rabbit-rescue-fl110/",
       "social": {
         "facebook": "https://www.facebook.com/gvillerabbitrescue",
         "instagram": "https://www.instagram.com/gainesvillerabbitrescue/"
@@ -250,7 +250,7 @@
       },
       "service_area": "Central Florida (Orange and Seminole Counties)",
       "website": "https://orlandorabbit.org",
-      "petfinder_url": "https://www.petfinder.com/member/us/fl/longwood/orlando-rabbit-care-adoptions-orca-fl140/",
+      "adoption_listing_url": "https://www.petfinder.com/member/us/fl/longwood/orlando-rabbit-care-adoptions-orca-fl140/",
       "social": {
         "facebook": "https://www.facebook.com/orlandorabbitcareandadoptions",
         "instagram": "https://www.instagram.com/orlandorabbitcareandadoptions/"
@@ -296,7 +296,7 @@
       },
       "service_area": "the Tampa Bay area",
       "website": "https://tbhrr.org",
-      "petfinder_url": "https://www.petfinder.com/member/us/fl/brandon/tampa-bay-house-rabbit-rescue-fl1313/",
+      "adoption_listing_url": "https://www.petfinder.com/member/us/fl/brandon/tampa-bay-house-rabbit-rescue-fl1313/",
       "social": {
         "facebook": "https://www.facebook.com/TBHouseRabbitRescue",
         "instagram": "https://www.instagram.com/tampabayhouserabbitrescue/"
@@ -341,7 +341,7 @@
       },
       "service_area": "Lee and Collier Counties",
       "website": "https://www.respectforrabbits.org",
-      "petfinder_url": "https://www.petfinder.com/member/us/fl/naples/southwest-florida-house-rabbit-rescue-fl1441/",
+      "adoption_listing_url": "https://www.petfinder.com/member/us/fl/naples/southwest-florida-house-rabbit-rescue-fl1441/",
       "social": {
         "facebook": "https://www.facebook.com/respectforrabbits",
         "instagram": "https://www.instagram.com/respectforrabbits/"
@@ -386,7 +386,7 @@
       },
       "service_area": "Palm Beach, Broward, Miami-Dade, and Martin Counties",
       "website": "https://eastcoastrabbitrescue.org",
-      "petfinder_url": "https://www.adoptapet.com/shelter/95759-east-coast-rabbit-rescue-west-palm-beach-florida",
+      "adoption_listing_url": "https://www.adoptapet.com/shelter/95759-east-coast-rabbit-rescue-west-palm-beach-florida",
       "social": {
         "facebook": "https://www.facebook.com/eastrabbitrescue",
         "instagram": "https://www.instagram.com/eastcoast.rabbitrescue/"
@@ -433,7 +433,7 @@
       },
       "service_area": "Miami-Dade, Broward, and Palm Beach Counties",
       "website": "https://pennyandwild.org",
-      "petfinder_url": "https://www.petfinder.com/member/us/fl/miami/penny-and-wild-smalls-of-south-florida-fl1733/",
+      "adoption_listing_url": "https://www.petfinder.com/member/us/fl/miami/penny-and-wild-smalls-of-south-florida-fl1733/",
       "social": {
         "facebook": "https://www.facebook.com/PennyandWildSOSFL",
         "instagram": "https://www.instagram.com/pennyandwildrescue/"
@@ -480,7 +480,7 @@
       "website": null,
       "website_note": "No dedicated website. Primary online presence via Linktree, Facebook, Instagram, and Petfinder.",
       "linktree_url": "https://linktr.ee/spacecoastbunnies",
-      "petfinder_url": "https://www.petfinder.com/search/pets-for-adoption/?shelter_id%5B0%5D=FL1599",
+      "adoption_listing_url": "https://www.petfinder.com/search/pets-for-adoption/?shelter_id%5B0%5D=FL1599",
       "social": {
         "facebook": "https://www.facebook.com/spacecoastbunnies",
         "instagram": "https://www.instagram.com/spacecoastbunnies/",
@@ -525,7 +525,7 @@
       },
       "service_area": "Nassau and Duval Counties (Jacksonville metro), Tallahassee, and the Panhandle",
       "website": "https://www.bebettesbunnyrescue.org",
-      "petfinder_url": "https://www.petfinder.com/member/us/fl/hilliard/bebettes-bunny-rescue-inc-fl1788/",
+      "adoption_listing_url": "https://www.petfinder.com/member/us/fl/hilliard/bebettes-bunny-rescue-inc-fl1788/",
       "social": {
         "facebook": "https://www.facebook.com/BebettesBunnyRescue",
         "instagram": "https://www.instagram.com/bebettesbunnyrescue/"
@@ -571,7 +571,7 @@
       },
       "service_area": "Volusia, Seminole, and Orange Counties",
       "website": "https://www.hollyhops.org",
-      "petfinder_url": "https://www.petfinder.com/member/us/fl/deltona/holly-hops-rabbit-rescue-and-rehabilitation-inc-fl1900/",
+      "adoption_listing_url": "https://www.petfinder.com/member/us/fl/deltona/holly-hops-rabbit-rescue-and-rehabilitation-inc-fl1900/",
       "social": {
         "facebook": "https://www.facebook.com/RabbitandGuineapigEducation"
       },
@@ -615,7 +615,7 @@
       },
       "service_area": "Miami-Dade and Broward Counties",
       "website": "https://southeastflrabbitrescue.org",
-      "petfinder_url": null,
+      "adoption_listing_url": null,
       "social": {
         "facebook": "https://www.facebook.com/SoutheastFLRabbitRescue/",
         "instagram": "https://www.instagram.com/southeastfl_rabbitrescue/"
@@ -802,7 +802,7 @@
       },
       "service_area": "Pinellas County · Tampa Bay area via foster and transport network",
       "website": "https://rebasrabbitrescue.com",
-      "petfinder_url": null,
+      "adoption_listing_url": null,
       "social": {
         "facebook": "https://www.facebook.com/share/1Bn5PieZ64/",
         "instagram": "https://www.instagram.com/rebasrabbitrescue/"
