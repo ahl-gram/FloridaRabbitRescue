@@ -8,7 +8,7 @@ Run:  python3 scripts/verify.py
 Output goes to planning/findings.json, which is not tracked in this repository.
 
 Sections covered: `organizations` (14), `excluded_organizations` (12, rendered at
-/other-rescues/), `shelters_and_services` (19), `closed_organizations` (3).
+/other-rescues/), `shelters_and_services` (20), `closed_organizations` (3).
 `organizations_watching` is empty and renders nowhere, so it is skipped by design.
 
 Automatable signals:
@@ -309,7 +309,7 @@ def sweep_closed_orgs(data):
 
 
 def sweep_shelters(data):
-    """The 19 shelters and humane societies. Only name + url + region are stored,
+    """The 20 shelters and humane societies. Only name + url + region are stored,
     so there is no EIN to check against. The cross-domain redirect check is the
     real detector here: this section is where the HSP/HSTB merger error lived."""
     findings = []
