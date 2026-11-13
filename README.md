@@ -10,7 +10,7 @@ The directory is not affiliated with any rescue organization, House Rabbit Socie
 
 ## What's on the Site
 
-- **Directory** — 15 rabbit rescue organizations with verified public records
+- **Directory** — Rabbit rescue organizations with verified public records
 - **Shared Values** — Core principles of responsible rabbit rescue, drawn from House Rabbit Society and Rabbit.org Foundation
 - **Before You Adopt** — Honest guidance for prospective rabbit owners
 - **About** — How organizations are selected and verified
