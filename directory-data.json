@@ -696,7 +696,9 @@
       },
       "species_focus": "rabbits_and_small_animals",
       "model": "sanctuary",
-      "caveats": [],
+      "caveats": [
+        "As of November 2026, the organization's website is down. According to their Facebook page, they are relocating."
+      ],
       "last_verified": "2026-07"
     },
     {
