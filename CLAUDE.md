@@ -64,6 +64,12 @@ removing an entry needs no copy edits.
 - Site prose uses no em-dashes. Use commas, colons or periods instead. An em-dash used as a list
   separator (e.g. "Name — reason" in Closed Organizations) is fine.
 
+## Re-verification
+
+The full listing re-verification (scripts, Sunbiz download, browser checks of social and adoption
+listings, maintainer hand-offs, verified-date move) is the `reverify-directory` skill in
+`.claude/skills/reverify-directory/`. Follow it rather than improvising.
+
 ## Local-only files
 
 `planning/`, `RESUME-HERE.md` and `SESSION-NOTES.md` are gitignored and may not exist in a

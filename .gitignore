@@ -1,6 +1,7 @@
 node_modules/
 _site/
-.claude/
+.claude/*
+!.claude/skills/
 .DS_Store
 planning/
 SESSION-NOTES.md

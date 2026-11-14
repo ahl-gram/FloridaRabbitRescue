@@ -1,0 +1,28 @@
+# usage: expect sunbiz-get.exp /ABSOLUTE/path/to/repo/planning/sunbiz [list]
+#   list  -> only print the server's file sizes and dates (no download)
+#   else  -> download corevent.zip and cordata.zip (~2 GB, ~6 min) into that directory
+# The login is the public credential documented in scripts/verify_sunbiz.py's docstring.
+set dest [lindex $argv 0]
+set mode [lindex $argv 1]
+set timeout -1
+spawn sftp Public@sftp.floridados.gov
+expect {
+  -re "yes/no" { send "yes\r"; exp_continue }
+  -re "(?i)password:" { send "PubAccess1845!\r" }
+}
+expect "sftp>"
+send "cd doc/quarterly/cor\r"
+expect "sftp>"
+if {$mode eq "list"} {
+  send "ls -l\r"
+  expect "sftp>"
+} else {
+  send "lcd $dest\r"
+  expect "sftp>"
+  send "get corevent.zip\r"
+  expect "sftp>"
+  send "get cordata.zip\r"
+  expect "sftp>"
+}
+send "bye\r"
+expect eof
