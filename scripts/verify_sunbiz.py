@@ -21,10 +21,10 @@ GETTING THE DATA (public, no account or API key)
     https://dos.fl.gov/sunbiz/other-services/data-downloads/ - the equivalent of an
     anonymous FTP login. It grants read-only access to already-public bulk records.
 
-    You must run this download by hand, in a real terminal. It cannot be scripted here:
-    macOS system curl is built without SFTP support (check with `curl -V`), and only the
-    interactive sftp client is available, which needs a TTY for the password prompt. If you
-    are working with an AI assistant, expect it to be unable to do this step for you.
+    macOS system curl is built without SFTP support (check with `curl -V`), and the sftp
+    client needs a TTY for its password prompt. Run it by hand in a terminal, or unattended
+    under /usr/bin/expect (ships with macOS), which supplies the TTY; that is how the
+    November 2026 pass fetched it, in about six minutes.
 
     sftp Public@sftp.floridados.gov          password: PubAccess1845!
     sftp> cd doc/quarterly/cor
@@ -44,7 +44,9 @@ GETTING THE DATA (public, no account or API key)
     rather than let the output look current.
 
     Do NOT unzip these. Uncompressed they are about 18.5 GB. This script streams them,
-    and a full scan of all 12.8 million records takes roughly 20 seconds.
+    and a full scan of all 12.8 million records takes roughly 20 seconds. Since October 2026
+    cordata.zip is Deflate64, which Python's zipfile cannot read, so it streams through
+    `unzip -p` instead (macOS's unzip handles it) and the scan takes about 80 seconds.
 
     Note the docs describe the corporate data as "broken into 10 smaller files" in a way
     that reads as if they are separate downloads. They are not. There is one cordata.zip,
@@ -88,6 +90,8 @@ WHAT THIS DOES NOT TELL YOU
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 import zipfile
 
@@ -110,6 +114,10 @@ COR = {
     "file_date": (472, 8),
     "last_tx_date": (495, 8),
 }
+# Three annual-report slots, each year(4) + flag(1) + date MMDDYYYY(8). Validated against
+# H.A.R.E. (2026 on 03/06/2026, 2025 on 01/29/2025) and One Love (2026 on 01/05/2026).
+REPORT_YEARS = ((505, 4), (518, 4), (531, 4))
+REPORT_DATES = ((510, 8), (523, 8), (536, 8))
 EVT = {
     "doc_number": (0, 12),
     "code": (17, 20),
@@ -145,6 +153,19 @@ def fmt_date(raw):
     return f"{raw[0:2]}/{raw[2:4]}/{raw[4:8]}" if len(raw) == 8 else "-"
 
 
+def latest_annual_report(record):
+    """(year, MM/DD/YYYY) of the newest annual report on file, or None."""
+    filed = []
+    for year_spec, date_spec in zip(REPORT_YEARS, REPORT_DATES):
+        year, date = text(record, year_spec), text(record, date_spec)
+        if year and len(date) == 8:
+            filed.append((year, date[4:8] + date[0:4], date))
+    if not filed:
+        return None
+    year, _, date = max(filed)
+    return year, fmt_date(date)
+
+
 def tokens(name):
     words = re.findall(r"[a-z]+", (name or "").lower())
     return {w for w in words if w not in MATCH_STOPWORDS}
@@ -157,22 +178,43 @@ def overlap(a, b):
     return len(ta & tb) / len(ta | tb)
 
 
+def records_from(handle, record_len, payload_len):
+    buf = b""
+    while True:
+        chunk = handle.read(record_len * 8000)
+        if not chunk:
+            break
+        buf += chunk
+        usable = len(buf) - (len(buf) % record_len)
+        for off in range(0, usable, record_len):
+            yield buf[off:off + payload_len].decode("latin-1")
+        buf = buf[usable:]
+
+
+def records_via_unzip(zip_path, member, record_len, payload_len):
+    """Fallback for compression Python's zipfile lacks (cordata.zip went Deflate64 in Oct 2026)."""
+    if not shutil.which("unzip"):
+        raise RuntimeError(f"{member} uses a compression method Python cannot read, "
+                           "and no `unzip` command is available to fall back on")
+    proc = subprocess.Popen(["unzip", "-p", zip_path, member], stdout=subprocess.PIPE)
+    yield from records_from(proc.stdout, record_len, payload_len)
+    proc.stdout.close()
+    if proc.wait() != 0:
+        raise RuntimeError(f"unzip failed on {member} (exit {proc.returncode})")
+
+
 def iter_records(zip_path, record_len, payload_len, members=None):
     """Stream fixed-width records without expanding the archive to disk."""
     with zipfile.ZipFile(zip_path) as archive:
         names = members or sorted(i.filename for i in archive.infolist())
         for member in names:
-            with archive.open(member) as handle:
-                buf = b""
-                while True:
-                    chunk = handle.read(record_len * 8000)
-                    if not chunk:
-                        break
-                    buf += chunk
-                    usable = len(buf) - (len(buf) % record_len)
-                    for off in range(0, usable, record_len):
-                        yield buf[off:off + payload_len].decode("latin-1")
-                    buf = buf[usable:]
+            try:
+                handle = archive.open(member)
+            except NotImplementedError:
+                yield from records_via_unzip(zip_path, member, record_len, payload_len)
+                continue
+            with handle:
+                yield from records_from(handle, record_len, payload_len)
 
 
 def doc_number_of(org):
@@ -245,6 +287,11 @@ def scan_events(numbers):
     return events
 
 
+def report_label(record):
+    latest = latest_annual_report(record)
+    return f"AR {latest[0]} on {latest[1]}" if latest else "no annual report"
+
+
 def report_status(targets, matched):
     print("\n== Registry status ==")
     inactive, missing = [], []
@@ -261,7 +308,7 @@ def report_status(targets, matched):
         elif kind == "closed" and status == "A":
             note = "   <== listed as closed but registry says active"
         print(f"  {status}  {number}  filed {fmt_date(text(record, COR['file_date']))}"
-              f"  {label[:30]:<30}{note}")
+              f"  {report_label(record):<24}  {label[:30]:<30}{note}")
     if missing:
         print("\n  not found in registry:")
         for label, number in missing:
@@ -298,11 +345,11 @@ def report_discovered(discovered, known):
             continue
         hint = f"possible match: {best_name}" if best_score >= POSSIBLE_MATCH else ""
         rows.append((name, text(record, COR["doc_number"]),
-                     fmt_date(text(record, COR["file_date"])), hint))
+                     fmt_date(text(record, COR["file_date"])), report_label(record), hint))
     if not rows:
         print("  none")
-    for name, number, filed, hint in sorted(rows):
-        print(f"  {number}  filed {filed}  {name[:44]:<44} {hint}")
+    for name, number, filed, report, hint in sorted(rows):
+        print(f"  {number}  filed {filed}  {report:<24}  {name[:44]:<44} {hint}")
     return rows
 
 

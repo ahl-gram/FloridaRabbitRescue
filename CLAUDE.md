@@ -10,12 +10,14 @@ npm run build                      # eleventy + pagefind -> _site/
 npm run serve                      # build, then live-reload preview
 python3 scripts/verify.py          # re-verification sweep, network only, ~2 min, read-only
 python3 scripts/verify_sunbiz.py   # FL corporate registry check; skips cleanly without bulk data
+python3 -m unittest discover -s tests   # unit tests for the verify scripts (stdlib only)
 ```
 
-Node 20 (`netlify.toml`). **There is no test suite.** "Verified" means the build succeeds and the
+Node 20 (`netlify.toml`). The site itself has no test suite. "Verified" means the build succeeds and the
 pages render correctly. For data changes, it also means the verify scripts are clean. Both scripts
 document their method, limits and setup in their module docstrings. Read those before running or
-changing them.
+changing them. `tests/fixtures/cordata-deflate64.zip` holds synthetic records only. It was made with
+`7zz a -tzip -mm=Deflate64` (brew `sevenzip`), because Python cannot write Deflate64.
 
 Deploy: pushing to `main` triggers a Netlify rebuild, and the site is live in about 30s. **A push to main is a
 production deploy.** Confirm changes on the live URL.
