@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Florida Rabbit Rescue Directory",
-    "last_verified": "2026-07",
+    "last_verified": "2026-11",
     "verifier_notes": "All data sourced from publicly available websites, GuideStar, Charity Navigator, Florida Division of Corporations (Sunbiz), and IRS Business Master File. Mission statements are verbatim or as close to verbatim as publicly available. Founding years sourced from FL corporate records, organization websites, or IRS ruling year where available."
   },
   "shared_values": {
@@ -237,7 +237,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_and_facility",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "orca",
@@ -283,7 +283,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "tbhrr",
@@ -328,7 +328,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "swfl",
@@ -373,7 +373,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "ecrr",
@@ -420,7 +420,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "pandw",
@@ -465,7 +465,7 @@
       "species_note": "Also rescues guinea pigs in addition to rabbits",
       "species_focus": "rabbits_and_guinea_pigs",
       "model": "foster_only",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "scb",
@@ -512,7 +512,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "bebette",
@@ -558,7 +558,7 @@
       },
       "species_focus": "rabbits_only",
       "model": "foster_only",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "holly",
@@ -602,7 +602,7 @@
       "species_note": "Rescue is rabbit-focused; website includes guinea pig education as a secondary interest",
       "species_focus": "rabbits_primary",
       "model": "foster_only",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "seflrr",
@@ -655,7 +655,7 @@
       "species_focus": "rabbits_and_guinea_pigs",
       "model": "foster_only",
       "directory_note": "Newest organization in the directory. 501(c)(3) confirmed via IRS determination letter (11/19/2024). Listed as of March 2026 with the caveat that this org has under one year of operation — outreach and annual re-verification recommended.",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "mcprr",
@@ -699,7 +699,7 @@
       "caveats": [
         "As of November 2026, the organization's website is down. According to their Facebook page, they are relocating."
       ],
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "hare",
@@ -747,7 +747,7 @@
         "Website is hosted on University of Miami pages and has not been substantially updated in years, so it is not a reliable guide to current activity. The organization itself is current: FL nonprofit registration active with a 2026 annual report filed, IRS exempt status in good standing, and an active Facebook presence.",
         "Adoption listings are directed to general Adoptapet and Petfinder searches rather than an organization-specific page. Contact them directly to ask about rabbit availability."
       ],
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "brs",
@@ -793,7 +793,7 @@
         "No Florida corporate filing or 501(c)(3) status on record",
         "Currently on hiatus — not accepting new surrenders. Still active as a rabbit education and referral resource, connecting those looking to surrender or adopt with other local rescues."
       ],
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     },
     {
       "id": "rebas",
@@ -846,7 +846,7 @@
         "Maintains permanent sanctuary residents, including rabbits with medical needs, that are not available for adoption"
       ],
       "directory_note": "Newest organization in the directory. FL nonprofit filed 12/16/2025 and active in the state registry; 501(c)(3) confirmed in the IRS Business Master File with a January 2026 ruling month. Listed as of July 2026 with the caveat that this org has under one year of operation — annual re-verification recommended.",
-      "last_verified": "2026-07"
+      "last_verified": "2026-11"
     }
   ],
   "organizations_watching": [],
@@ -898,7 +898,7 @@
     },
     {
       "name": "Humane Society of Tampa Bay (Hillsborough & Pinellas Campuses)",
-      "url": "https://humanesocietytampabay.org/",
+      "url": "https://hstb.org/",
       "region": "Tampa Bay Area"
     },
     {
@@ -913,7 +913,7 @@
     },
     {
       "name": "Lee County Domestic Animal Services",
-      "url": "https://www.leegov.com/animalservices",
+      "url": "https://www.leefl.gov/animalservices",
       "region": "Southwest Florida"
     },
     {
